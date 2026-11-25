@@ -70,10 +70,13 @@ public final class PhotoKitLibrary: PhotoLibrary {
     public func addToAlbum(named name: String, add: [String], remove: [String], inFolder folderName: String?) async throws {
         let folder = folderName.flatMap(Self.topLevelFolder(named:))
         // Look for the album inside the folder when there is one, otherwise among top-level albums.
+        // With a folder, only an album inside that folder counts; a same-named album elsewhere belongs to another cleanup.
         var existing: PHAssetCollection?
-        if let folder {
-            PHCollection.fetchCollections(in: folder, options: nil).enumerateObjects { c, _, stop in
-                if let album = c as? PHAssetCollection, album.localizedTitle == name { existing = album; stop.pointee = true }
+        if folderName != nil {
+            if let folder {
+                PHCollection.fetchCollections(in: folder, options: nil).enumerateObjects { c, _, stop in
+                    if let album = c as? PHAssetCollection, album.localizedTitle == name { existing = album; stop.pointee = true }
+                }
             }
         } else {
             PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil).enumerateObjects { c, _, stop in

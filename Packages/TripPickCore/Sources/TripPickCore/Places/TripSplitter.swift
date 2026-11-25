@@ -85,8 +85,23 @@ public enum TripSplitter {
         return runs.count >= 2 ? runs : []
     }
 
+    /// Stretches segments so together they cover every day of the chosen range with no gaps:
+    /// the first starts on the range's first day, each ends the day before the next starts, the last ends on the range's last day.
+    public static func fill(_ segments: [CitySegment], range: DateInterval, calendar: Calendar) -> [CitySegment] {
+        guard !segments.isEmpty else { return [] }
+        var out = segments
+        out[0].start = calendar.startOfDay(for: range.start)
+        for i in out.indices.dropLast() {
+            out[i].end = calendar.date(byAdding: .day, value: -1, to: out[i + 1].start) ?? out[i].end
+        }
+        let lastDay = calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: range.end)) ?? out[out.count - 1].end
+        out[out.count - 1].end = max(lastDay, out[out.count - 1].end)
+        return out
+    }
+
     /// Suggested city segments for the photos of a date range; empty when it's one place or locations are missing.
-    public static func suggest(items: [MediaItem], namer: PlaceNaming, locale: Locale, calendar: Calendar = .current) async -> [CitySegment] {
+    public static func suggest(items: [MediaItem], namer: PlaceNaming, locale: Locale, range: DateInterval? = nil,
+                               calendar: Calendar = .current) async -> [CitySegment] {
         let located = items.filter { $0.location != nil }
         var named: [(center: Coordinate, place: PlaceName)] = []
         for cluster in PlaceClusterer.clusters(located) where cluster.count >= minPhotos {
@@ -111,6 +126,8 @@ public enum TripSplitter {
             let top = entry.places.values.max { $0.1 < $1.1 }
             return DayCity(day: day, city: top?.0.city, country: top?.0.country, count: entry.total)
         }
-        return segments(days: days, calendar: calendar)
+        let found = segments(days: days, calendar: calendar)
+        guard let range else { return found }
+        return fill(found, range: range, calendar: calendar)
     }
 }

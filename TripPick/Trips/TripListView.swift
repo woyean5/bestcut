@@ -116,9 +116,10 @@ struct TripListView: View {
 enum TripName {
     /// "Nov 10 – 15" style, in the user's language.
     static func dates(_ range: TripRange) -> String {
-        let start = range.start.formatted(.dateTime.month(.abbreviated).day())
+        let style = Date.FormatStyle.dateTime.month(.abbreviated).day().locale(AppLanguage.current.locale)
+        let start = range.start.formatted(style)
         if Calendar.current.isDate(range.start, inSameDayAs: range.end) { return start }
-        return "\(start) – \(range.end.formatted(.dateTime.month(.abbreviated).day()))"
+        return "\(start) – \(range.end.formatted(style))"
     }
 }
 

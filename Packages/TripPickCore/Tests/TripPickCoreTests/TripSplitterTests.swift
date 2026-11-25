@@ -56,3 +56,14 @@ private func d(_ n: Int, _ city: String?, _ count: Int = 10, country: String? = 
     #expect(s.map(\.city) == ["Osaka", "Tokyo"])
     #expect(s.allSatisfy { $0.country == "Japan" })
 }
+
+@Test func segmentsCoverEveryDayOfTheChosenRange() {
+    // Osaka on days 1-2, nothing on day 3, Tokyo on days 4-5; the chosen range is days 0-6.
+    let days = [d(1, "Osaka"), d(2, "Osaka"), d(4, "Tokyo"), d(5, "Tokyo")]
+    let s = TripSplitter.fill(TripSplitter.segments(days: days, calendar: utc),
+                              range: DateInterval(start: day(0), end: day(7)), calendar: utc)
+    #expect(s.map(\.city) == ["Osaka", "Tokyo"])
+    #expect(s[0].start == day(0))
+    #expect(s[1].start == s[0].end.addingTimeInterval(86_400))
+    #expect(s[1].end == day(6))
+}

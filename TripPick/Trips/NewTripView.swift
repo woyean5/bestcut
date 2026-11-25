@@ -135,17 +135,20 @@ struct NewTripView: View {
 
     private func suggestSplit() async {
         let locale = AppLanguage.current.locale
-        let found = await TripSplitter.suggest(items: handled, namer: AppleMapsPlaceNamer(), locale: locale)
+        let found = await TripSplitter.suggest(items: handled, namer: AppleMapsPlaceNamer(), locale: locale, range: range.interval)
         guard !Task.isCancelled else { return }
         segments = found
         guard !found.isEmpty else { return }
         let countries = Set(found.compactMap(\.country))
+        let base: String
         if countries.count == 1, found.allSatisfy({ $0.country != nil }), let country = countries.first {
-            folderName = L10n.string("\(country) Trip")
+            base = L10n.string("\(country) Trip")
         } else {
             let places = TripTitle.join(found.map(\.city), languageCode: locale.language.languageCode?.identifier ?? "en")
-            folderName = L10n.string("\(places) Trip")
+            base = L10n.string("\(places) Trip")
         }
+        // Dates keep a second trip to the same country from landing in last time's folder and albums.
+        folderName = "\(base) · \(TripName.dates(range))"
     }
 
     private func createSplit() {
