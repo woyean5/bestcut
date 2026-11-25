@@ -58,7 +58,8 @@ public final class PhotoKitLibrary: PhotoLibrary {
             PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: side, height: side),
                                                   contentMode: .aspectFit, options: options) { image, _ in
                 #if canImport(UIKit)
-                cont.resume(returning: image?.cgImage)
+                guard let image, let cg = image.cgImage else { cont.resume(returning: nil); return }
+                cont.resume(returning: ImageOrientation.upright(cg, CGImagePropertyOrientation(image.imageOrientation)))
                 #else
                 cont.resume(returning: image?.cgImage(forProposedRect: nil, context: nil, hints: nil))
                 #endif
@@ -100,3 +101,21 @@ public final class PhotoKitLibrary: PhotoLibrary {
             || (error.domain == NSCocoaErrorDomain && error.code == 3072)
     }
 }
+
+#if canImport(UIKit)
+extension CGImagePropertyOrientation {
+    init(_ o: UIImage.Orientation) {
+        switch o {
+        case .up: self = .up
+        case .down: self = .down
+        case .left: self = .left
+        case .right: self = .right
+        case .upMirrored: self = .upMirrored
+        case .downMirrored: self = .downMirrored
+        case .leftMirrored: self = .leftMirrored
+        case .rightMirrored: self = .rightMirrored
+        @unknown default: self = .up
+        }
+    }
+}
+#endif
