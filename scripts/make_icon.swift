@@ -15,12 +15,14 @@ struct Style {
     var sky, sun, hill, hillDark: CGColor // the little photo
     var badge, check: CGColor
     var shadow: CGColor
+    var cardStroke: CGColor? = nil
 }
 
-let light = Style(bgTop: c(0.36, 0.78, 0.98), bgBottom: c(0.12, 0.45, 0.95),
-                  backCard: c(1, 1, 1, 0.45), card: c(1, 1, 1),
+let light = Style(bgTop: c(1, 1, 1), bgBottom: c(0.95, 0.96, 0.98),
+                  backCard: c(0.33, 0.60, 0.97, 0.30), card: c(1, 1, 1),
                   sky: c(0.82, 0.92, 1.0), sun: c(1.0, 0.76, 0.22), hill: c(0.27, 0.70, 0.52), hillDark: c(0.16, 0.55, 0.42),
-                  badge: c(0.20, 0.78, 0.35), check: c(1, 1, 1), shadow: c(0, 0.1, 0.3, 0.28))
+                  badge: c(0.20, 0.78, 0.35), check: c(1, 1, 1), shadow: c(0.05, 0.1, 0.2, 0.18),
+                  cardStroke: c(0, 0, 0, 0.08))
 let dark = Style(bgTop: c(0.13, 0.14, 0.17), bgBottom: c(0.05, 0.05, 0.07),
                  backCard: c(0.40, 0.62, 0.95, 0.35), card: c(0.20, 0.21, 0.24),
                  sky: c(0.16, 0.30, 0.50), sun: c(1.0, 0.76, 0.22), hill: c(0.25, 0.66, 0.50), hillDark: c(0.15, 0.50, 0.38),
@@ -54,6 +56,9 @@ func draw(_ s: Style) -> CGImage {
     ctx.setShadow(offset: CGSize(width: 0, height: 22), blur: 48, color: s.shadow)
     ctx.addPath(cardPath(front, angle)); ctx.setFillColor(s.card); ctx.fillPath()
     ctx.restoreGState()
+    if let stroke = s.cardStroke {
+        ctx.addPath(cardPath(front, angle)); ctx.setStrokeColor(stroke); ctx.setLineWidth(4); ctx.strokePath()
+    }
 
     // The photo inside the card.
     ctx.saveGState()
