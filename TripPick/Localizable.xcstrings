@@ -757,28 +757,6 @@
         }
       }
     },
-    "Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "选择旅行日期。BestCut 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
-          }
-        }
-      }
-    },
     "Compare": {
       "localizations": {
         "ja": {
@@ -1225,6 +1203,28 @@
         }
       }
     },
+    "Keep only your best shots": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よく撮れた写真だけを残しましょう"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "잘 나온 사진만 남겨 보세요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只留下拍得最好的照片"
+          }
+        }
+      }
+    },
     "Keep this": {
       "localizations": {
         "ja": {
@@ -1511,6 +1511,28 @@
         }
       }
     },
+    "Name": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名前"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이름"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称"
+          }
+        }
+      }
+    },
     "Name from places": {
       "localizations": {
         "ja": {
@@ -1533,24 +1555,24 @@
         }
       }
     },
-    "New trip": {
+    "New cleanup": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "新しい旅行"
+            "value": "新しい整理"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "새 여행"
+            "value": "새 정리"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新旅行"
+            "value": "新的整理"
           }
         }
       }
@@ -1643,50 +1665,6 @@
         }
       }
     },
-    "Organize a new trip": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しい旅行を整理"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "새 여행 정리"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "整理新旅行"
-          }
-        }
-      }
-    },
-    "Organize your first trip": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "最初の旅行を整理しましょう"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "첫 여행을 정리해 보세요"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "整理你的第一次旅行"
-          }
-        }
-      }
-    },
     "Photo access is off": {
       "localizations": {
         "ja": {
@@ -1709,46 +1687,46 @@
         }
       }
     },
-    "Pick your best travel shots": {
+    "Pick a date range, like a trip, a weekend, or last month. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "旅行のベストショットだけを選びましょう"
+            "value": "旅行や週末、先月など、整理する期間を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "여행 베스트 컷만 골라 보세요"
+            "value": "여행, 주말, 지난달처럼 정리할 기간을 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "只留下旅行中的最佳照片"
+            "value": "选择要整理的时间段，比如一次旅行、一个周末或上个月。BestCut 会把相似照片归为一组并标出模糊照片，你只需挑选即可。"
           }
         }
       }
     },
-    "Rename trip": {
+    "Rename": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "旅行名を変更"
+            "value": "名前を変更"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "여행 이름 바꾸기"
+            "value": "이름 바꾸기"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "重命名旅行"
+            "value": "重命名"
           }
         }
       }
@@ -1995,6 +1973,28 @@
         }
       }
     },
+    "Start a new cleanup": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新しく整理する"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새로 정리하기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建整理"
+          }
+        }
+      }
+    },
     "Start organizing": {
       "localizations": {
         "ja": {
@@ -2013,6 +2013,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "开始整理"
+          }
+        }
+      }
+    },
+    "Start your first cleanup": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最初の整理を始めましょう"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "첫 정리를 시작해 보세요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始你的第一次整理"
           }
         }
       }
@@ -2171,28 +2193,6 @@
         }
       }
     },
-    "Trip name": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "旅行名"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "여행 이름"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "旅行名称"
-          }
-        }
-      }
-    },
     "Undo": {
       "localizations": {
         "ja": {
@@ -2259,24 +2259,24 @@
         }
       }
     },
-    "Which trip should we organize?": {
+    "Which dates should we organize?": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "どの旅行を整理しますか？"
+            "value": "どの期間の写真を整理しますか？"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "어느 여행을 정리할까요?"
+            "value": "어느 기간의 사진을 정리할까요?"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "要整理哪次旅行？"
+            "value": "要整理哪段时间的照片？"
           }
         }
       }
@@ -2299,6 +2299,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "你只共享了部分照片"
+          }
+        }
+      }
+    },
+    "Your cleanups": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理リスト"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "정리 목록"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理列表"
           }
         }
       }
@@ -2343,28 +2365,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "照片可能没有位置信息，或者你未连接网络。"
-          }
-        }
-      }
-    },
-    "Your trips": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "旅行一覧"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "내 여행"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "我的旅行"
           }
         }
       }

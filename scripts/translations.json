@@ -45,11 +45,6 @@
    "ja": "キャンセル",
    "zh-Hans": "取消"
   },
-  "Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
-   "ko": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.",
-   "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。",
-   "zh-Hans": "选择旅行日期。BestCut 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
-  },
   "Dark": {
    "ko": "다크",
    "ja": "ダーク",
@@ -85,35 +80,15 @@
    "ja": "写真を確認しています",
    "zh-Hans": "正在查看你的照片"
   },
-  "New trip": {
-   "ko": "새 여행",
-   "ja": "新しい旅行",
-   "zh-Hans": "新旅行"
-  },
   "Open Settings": {
    "ko": "설정 열기",
    "ja": "設定を開く",
    "zh-Hans": "打开设置"
   },
-  "Organize a new trip": {
-   "ko": "새 여행 정리",
-   "ja": "新しい旅行を整理",
-   "zh-Hans": "整理新旅行"
-  },
-  "Organize your first trip": {
-   "ko": "첫 여행을 정리해 보세요",
-   "ja": "最初の旅行を整理しましょう",
-   "zh-Hans": "整理你的第一次旅行"
-  },
   "Photo access is off": {
    "ko": "사진 접근이 꺼져 있어요",
    "ja": "写真へのアクセスがオフです",
    "zh-Hans": "照片访问已关闭"
-  },
-  "Pick your best travel shots": {
-   "ko": "여행 베스트 컷만 골라 보세요",
-   "ja": "旅行のベストショットだけを選びましょう",
-   "zh-Hans": "只留下旅行中的最佳照片"
   },
   "Select more photos": {
    "ko": "사진 더 선택",
@@ -185,11 +160,6 @@
    "ja": "このくらい短い動画は誤って撮影されたことが多いです。これより長い動画は表示されません。",
    "zh-Hans": "这么短的视频大多是误拍的。更长的视频不会显示。"
   },
-  "Which trip should we organize?": {
-   "ko": "어느 여행을 정리할까요?",
-   "ja": "どの旅行を整理しますか？",
-   "zh-Hans": "要整理哪次旅行？"
-  },
   "You've shared only some photos": {
    "ko": "일부 사진만 공유되어 있어요",
    "ja": "一部の写真だけが共有されています",
@@ -199,11 +169,6 @@
    "ko": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
    "ja": "写真はこのiPhoneの中だけで分析され、外に送信されることはありません。",
    "zh-Hans": "照片只在这台 iPhone 上分析，绝不会离开设备。"
-  },
-  "Your trips": {
-   "ko": "내 여행",
-   "ja": "旅行一覧",
-   "zh-Hans": "我的旅行"
   },
   "%lld groups": {
    "en": {
@@ -317,11 +282,6 @@
    "ja": "その他",
    "zh-Hans": "更多"
   },
-  "Rename trip": {
-   "ko": "여행 이름 바꾸기",
-   "ja": "旅行名を変更",
-   "zh-Hans": "重命名旅行"
-  },
   "Results": {
    "ko": "결과",
    "ja": "結果",
@@ -356,11 +316,6 @@
    "ko": "노출 과다",
    "ja": "明るすぎ",
    "zh-Hans": "过亮"
-  },
-  "Trip name": {
-   "ko": "여행 이름",
-   "ja": "旅行名",
-   "zh-Hans": "旅行名称"
   },
   "%lld / %lld": {
    "en": "%1$lld / %2$lld",
@@ -554,6 +509,51 @@
    "ko": "사진에 위치 정보가 없거나 인터넷에 연결되어 있지 않을 수 있어요.",
    "ja": "写真に位置情報がないか、インターネットに接続されていない可能性があります。",
    "zh-Hans": "照片可能没有位置信息，或者你未连接网络。"
+  },
+  "Pick a date range, like a trip, a weekend, or last month. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
+   "ko": "여행, 주말, 지난달처럼 정리할 기간을 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.",
+   "ja": "旅行や週末、先月など、整理する期間を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。",
+   "zh-Hans": "选择要整理的时间段，比如一次旅行、一个周末或上个月。BestCut 会把相似照片归为一组并标出模糊照片，你只需挑选即可。"
+  },
+  "New cleanup": {
+   "ko": "새 정리",
+   "ja": "新しい整理",
+   "zh-Hans": "新的整理"
+  },
+  "Start a new cleanup": {
+   "ko": "새로 정리하기",
+   "ja": "新しく整理する",
+   "zh-Hans": "新建整理"
+  },
+  "Start your first cleanup": {
+   "ko": "첫 정리를 시작해 보세요",
+   "ja": "最初の整理を始めましょう",
+   "zh-Hans": "开始你的第一次整理"
+  },
+  "Keep only your best shots": {
+   "ko": "잘 나온 사진만 남겨 보세요",
+   "ja": "よく撮れた写真だけを残しましょう",
+   "zh-Hans": "只留下拍得最好的照片"
+  },
+  "Which dates should we organize?": {
+   "ko": "어느 기간의 사진을 정리할까요?",
+   "ja": "どの期間の写真を整理しますか？",
+   "zh-Hans": "要整理哪段时间的照片？"
+  },
+  "Your cleanups": {
+   "ko": "정리 목록",
+   "ja": "整理リスト",
+   "zh-Hans": "整理列表"
+  },
+  "Rename": {
+   "ko": "이름 바꾸기",
+   "ja": "名前を変更",
+   "zh-Hans": "重命名"
+  },
+  "Name": {
+   "ko": "이름",
+   "ja": "名前",
+   "zh-Hans": "名称"
   }
  }
 }

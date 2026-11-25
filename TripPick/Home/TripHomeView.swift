@@ -59,7 +59,7 @@ struct TripHomeView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu("More", systemImage: "ellipsis") {
-                    Button("Rename trip", systemImage: "pencil") { newName = trip.name; renaming = true }
+                    Button("Rename", systemImage: "pencil") { newName = trip.name; renaming = true }
                     Button("Name from places", systemImage: "mappin.and.ellipse") { Task { await nameFromPlaces() } }
                         .disabled(naming)
                 }
@@ -68,8 +68,8 @@ struct TripHomeView: View {
                 NavigationLink(value: HomeRoute.summary) { Text("Results") }
             }
         }
-        .alert("Rename trip", isPresented: $renaming) {
-            TextField("Trip name", text: $newName)
+        .alert("Rename", isPresented: $renaming) {
+            TextField("Name", text: $newName)
             Button("Cancel", role: .cancel) {}
             Button("Save") {
                 let name = newName.trimmingCharacters(in: .whitespaces)

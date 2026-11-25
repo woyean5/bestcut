@@ -25,7 +25,7 @@ struct TripListView: View {
                     }
                 }
                 if !trips.isEmpty {
-                    Section("Your trips") {
+                    Section("Your cleanups") {
                         ForEach(trips) { trip in
                             NavigationLink(value: trip.id) {
                                 VStack(alignment: .leading, spacing: 2) {
@@ -43,14 +43,14 @@ struct TripListView: View {
             .overlay {
                 if trips.isEmpty {
                     ContentUnavailableView {
-                        Label("Organize your first trip", systemImage: "airplane.departure")
+                        Label("Start your first cleanup", systemImage: "airplane.departure")
                     } description: {
-                        Text("Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.")
+                        Text("Pick a date range, like a trip, a weekend, or last month. BestCut groups similar shots and flags blurry ones so you only have to pick.")
                     }
                 }
             }
             .safeAreaInset(edge: .bottom) {
-                Button("Organize a new trip", systemImage: "plus") { showNewTrip = true }
+                Button("Start a new cleanup", systemImage: "plus") { showNewTrip = true }
                     .buttonStyle(.glassProminent)
                     .controlSize(.large)
                     .padding(.bottom, 8)

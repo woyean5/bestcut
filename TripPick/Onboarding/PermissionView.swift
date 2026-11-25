@@ -15,7 +15,7 @@ struct PermissionView: View {
                 .padding(28)
                 .glassEffect(.regular, in: .circle)
             VStack(spacing: 12) {
-                Text(state == .denied ? "Photo access is off" : "Pick your best travel shots")
+                Text(state == .denied ? "Photo access is off" : "Keep only your best shots")
                     .font(.title.bold())
                     .multilineTextAlignment(.center)
                 Text(state == .denied

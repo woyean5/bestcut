@@ -31,16 +31,16 @@ struct NewTripView: View {
                     DatePicker("Start", selection: $start, displayedComponents: .date)
                     DatePicker("End", selection: $end, displayedComponents: .date)
                 } header: {
-                    Text("Which trip should we organize?")
+                    Text("Which dates should we organize?")
                 }
                 Section {
                     HStack {
-                        TextField("Trip name", text: Binding(get: { name }, set: { name = $0; nameEdited = true; isSuggested = false }),
+                        TextField("Name", text: Binding(get: { name }, set: { name = $0; nameEdited = true; isSuggested = false }),
                                   prompt: Text(verbatim: TripName.dates(range)))
                         if suggesting { ProgressView() }
                     }
                 } header: {
-                    Text("Trip name")
+                    Text("Name")
                 } footer: {
                     if isSuggested { Label("Suggested from where your photos were taken.", systemImage: "mappin.and.ellipse") }
                 }
@@ -70,7 +70,7 @@ struct NewTripView: View {
                     }
                 }
             }
-            .navigationTitle(Text("New trip"))
+            .navigationTitle(Text("New cleanup"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
