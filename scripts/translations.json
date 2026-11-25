@@ -549,6 +549,45 @@
    "ko": "이름",
    "ja": "名前",
    "zh-Hans": "名称"
+  },
+  "%lld places": {
+   "en": {
+    "one": "%lld place",
+    "other": "%lld places"
+   },
+   "ko": "%lld곳",
+   "ja": "%lldか所",
+   "zh-Hans": "%lld 个地点"
+  },
+  "Each city becomes its own cleanup inside one folder. The same folder is made in Photos.": {
+   "ko": "도시마다 따로 정리하고, 하나의 폴더로 묶어요. 사진 앱에도 같은 폴더가 만들어져요.",
+   "ja": "都市ごとに別々に整理し、1つのフォルダにまとめます。写真アプリにも同じフォルダが作成されます。",
+   "zh-Hans": "每个城市分别整理，并放进同一个文件夹。“照片”中也会创建相同的文件夹。"
+  },
+  "Folder name": {
+   "ko": "폴더 이름",
+   "ja": "フォルダ名",
+   "zh-Hans": "文件夹名称"
+  },
+  "Folders": {
+   "ko": "폴더",
+   "ja": "フォルダ",
+   "zh-Hans": "文件夹"
+  },
+  "Organize as one": {
+   "ko": "하나로 정리",
+   "ja": "1つにまとめて整理",
+   "zh-Hans": "合并整理"
+  },
+  "Split by city": {
+   "ko": "도시별로 나눠서 정리",
+   "ja": "都市ごとに分けて整理",
+   "zh-Hans": "按城市分开整理"
+  },
+  "Split by city?": {
+   "ko": "도시별로 나눌까요?",
+   "ja": "都市ごとに分けますか？",
+   "zh-Hans": "要按城市分开吗？"
   }
  }
 }

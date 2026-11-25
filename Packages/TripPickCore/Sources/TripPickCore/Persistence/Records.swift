@@ -7,16 +7,32 @@ import SwiftData
     public var startDate: Date
     public var endDate: Date
     public var createdAt: Date
+    /// The folder this cleanup belongs to, if it was made by splitting a range by city.
+    public var folderID: UUID?
 
-    public init(id: UUID = UUID(), name: String, startDate: Date, endDate: Date, createdAt: Date = .now) {
+    public init(id: UUID = UUID(), name: String, startDate: Date, endDate: Date, createdAt: Date = .now, folderID: UUID? = nil) {
         self.id = id
         self.name = name
         self.startDate = startDate
         self.endDate = endDate
         self.createdAt = createdAt
+        self.folderID = folderID
     }
 
     public var range: TripRange { TripRange(start: startDate, end: endDate) }
+}
+
+/// Groups city cleanups of one journey, like "일본 여행". One level only.
+@Model public final class FolderRecord {
+    @Attribute(.unique) public var id: UUID
+    public var name: String
+    public var createdAt: Date
+
+    public init(id: UUID = UUID(), name: String, createdAt: Date = .now) {
+        self.id = id
+        self.name = name
+        self.createdAt = createdAt
+    }
 }
 
 @Model final class DecisionRecord {
@@ -52,7 +68,7 @@ import SwiftData
 }
 
 public enum TripPickSchema {
-    public static var models: [any PersistentModel.Type] { [TripRecord.self, DecisionRecord.self, AnalysisRecord.self] }
+    public static var models: [any PersistentModel.Type] { [TripRecord.self, FolderRecord.self, DecisionRecord.self, AnalysisRecord.self] }
 
     public static func container(inMemory: Bool) throws -> ModelContainer {
         try ModelContainer(for: Schema(models), configurations: ModelConfiguration(isStoredInMemoryOnly: inMemory))

@@ -14,6 +14,7 @@ struct TripHomeView: View {
     let trip: TripRecord
     @State private var renaming = false
     @State private var newName = ""
+    @Query private var folders: [FolderRecord]
     @State private var naming = false
     @State private var namingFailed = false
 
@@ -85,7 +86,8 @@ struct TripHomeView: View {
             switch route {
             case .review(let queue): ReviewSetView(session: session, queue: queue)
             case .swipe(let singlesOnly): SwipeReviewView(session: session, singlesOnly: singlesOnly)
-            case .summary: SummaryView(session: session, tripName: trip.name)
+            case .summary: SummaryView(session: session, tripName: trip.name,
+                                       folderName: folders.first { $0.id == trip.folderID }?.name)
             }
         }
     }

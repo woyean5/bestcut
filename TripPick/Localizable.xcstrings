@@ -275,6 +275,46 @@
         }
       }
     },
+    "%lld places": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld place"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld places"
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lldか所"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld곳"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个地点"
+          }
+        }
+      }
+    },
     "%lld sec or less": {
       "localizations": {
         "ja": {
@@ -977,6 +1017,28 @@
         }
       }
     },
+    "Each city becomes its own cleanup inside one folder. The same folder is made in Photos.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "都市ごとに別々に整理し、1つのフォルダにまとめます。写真アプリにも同じフォルダが作成されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "도시마다 따로 정리하고, 하나의 폴더로 묶어요. 사진 앱에도 같은 폴더가 만들어져요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每个城市分别整理，并放进同一个文件夹。“照片”中也会创建相同的文件夹。"
+          }
+        }
+      }
+    },
     "End": {
       "localizations": {
         "ja": {
@@ -1083,6 +1145,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "个人收藏"
+          }
+        }
+      }
+    },
+    "Folder name": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダ名"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "폴더 이름"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹名称"
+          }
+        }
+      }
+    },
+    "Folders": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "폴더"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹"
           }
         }
       }
@@ -1643,6 +1749,28 @@
         }
       }
     },
+    "Organize as one": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1つにまとめて整理"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "하나로 정리"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "合并整理"
+          }
+        }
+      }
+    },
     "Photo access is off": {
       "localizations": {
         "ja": {
@@ -1925,6 +2053,50 @@
           "stringUnit": {
             "state": "translated",
             "value": "单张照片"
+          }
+        }
+      }
+    },
+    "Split by city": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "都市ごとに分けて整理"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "도시별로 나눠서 정리"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按城市分开整理"
+          }
+        }
+      }
+    },
+    "Split by city?": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "都市ごとに分けますか？"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "도시별로 나눌까요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要按城市分开吗？"
           }
         }
       }

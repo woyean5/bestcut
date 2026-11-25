@@ -56,3 +56,17 @@ import Testing
     #expect(cache.results(for: ["new3-7", "old9"]).count == 2)
     #expect(elapsed < .seconds(2), "20 batch saves took \(elapsed)")
 }
+
+@MainActor @Test func foldersPersistWithTrips() throws {
+    let container = try TripPickSchema.container(inMemory: true)
+    let folder = FolderRecord(name: "일본 여행")
+    container.mainContext.insert(folder)
+    container.mainContext.insert(TripRecord(name: "오사카", startDate: baseDate, endDate: baseDate, folderID: folder.id))
+    container.mainContext.insert(TripRecord(name: "혼자", startDate: baseDate, endDate: baseDate))
+    try container.mainContext.save()
+    let fresh = ModelContext(container)
+    let trips = try fresh.fetch(FetchDescriptor<TripRecord>())
+    #expect(try fresh.fetch(FetchDescriptor<FolderRecord>()).map(\.name) == ["일본 여행"])
+    #expect(trips.first { $0.name == "오사카" }?.folderID == folder.id)
+    #expect(trips.first { $0.name == "혼자" }?.folderID == nil)
+}
