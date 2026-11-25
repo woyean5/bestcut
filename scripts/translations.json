@@ -1,16 +1,16 @@
 {
  "infoPlist": {
   "NSPhotoLibraryUsageDescription": {
-   "en": "TripPick looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device.",
+   "en": "BestCut looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device.",
    "ko": "흔들린 사진과 비슷한 사진을 찾기 위해 이 iPhone의 사진을 살펴봅니다. 사진은 기기 밖으로 나가지 않습니다.",
    "ja": "ブレた写真や似た写真を見つけるために、このiPhoneの写真を確認します。写真が端末の外に送信されることはありません。",
-   "zh-Hans": "TripPick 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
+   "zh-Hans": "BestCut 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
   },
   "CFBundleDisplayName": {
-   "en": "TripPick",
-   "ko": "TripPick",
-   "ja": "TripPick",
-   "zh-Hans": "TripPick"
+   "en": "BestCut",
+   "ko": "베스트컷",
+   "ja": "ベストカット",
+   "zh-Hans": "BestCut"
   }
  },
  "strings": {
@@ -45,10 +45,10 @@
    "ja": "キャンセル",
    "zh-Hans": "取消"
   },
-  "Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.": {
+  "Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
    "ko": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.",
    "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。",
-   "zh-Hans": "选择旅行日期。TripPick 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
+   "zh-Hans": "选择旅行日期。BestCut 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
   },
   "Dark": {
    "ko": "다크",
@@ -160,20 +160,20 @@
    "ja": "この期間には写真がありません。",
    "zh-Hans": "这段时间内没有照片。"
   },
-  "TripPick": {
-   "ko": "TripPick",
-   "ja": "TripPick",
-   "zh-Hans": "TripPick"
+  "BestCut": {
+   "ko": "베스트컷",
+   "ja": "ベストカット",
+   "zh-Hans": "BestCut"
   },
-  "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
+  "BestCut finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
    "ko": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
    "ja": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。",
-   "zh-Hans": "TripPick 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
+   "zh-Hans": "BestCut 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
   },
-  "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
+  "BestCut needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
    "ko": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요.",
    "ja": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。",
-   "zh-Hans": "TripPick 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
+   "zh-Hans": "BestCut 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
   },
   "Version": {
    "ko": "버전",

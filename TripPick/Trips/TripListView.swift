@@ -45,7 +45,7 @@ struct TripListView: View {
                     ContentUnavailableView {
                         Label("Organize your first trip", systemImage: "airplane.departure")
                     } description: {
-                        Text("Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.")
+                        Text("Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.")
                     }
                 }
             }
@@ -55,7 +55,7 @@ struct TripListView: View {
                     .controlSize(.large)
                     .padding(.bottom, 8)
             }
-            .navigationTitle(Text("TripPick"))
+            .navigationTitle(Text("BestCut"))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Settings", systemImage: "gearshape") { showSettings = true }

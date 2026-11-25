@@ -1,4 +1,4 @@
-# 내 iPhone에서 TripPick 실행하기 (개발자 계정 없이)
+# 내 iPhone에서 BestCut 실행하기 (개발자 계정 없이)
 
 Apple Developer Program에 가입하지 않아도, 무료 Apple ID로 본인 iPhone에 설치해 쓸 수 있습니다. 다만 **7일마다 다시 설치해야** 합니다(무료 계정의 제한).
 
@@ -34,4 +34,4 @@ App Store에는 6.9인치 화면(1320×2868, 예: iPhone 18 Pro Max) 스크린�
 3. 스와이프 화면
 4. 결과 요약("1,284 → 212"처럼 숫자가 큰 여행으로)
 
-시뮬레이터에서 찍을 때는 `xcrun simctl io booted screenshot 파일이름.png` 명령을 씁니다. 언어별(한국어, 영어, 일본어) 화면은 iPhone 설정 → 앱 → TripPick → 언어에서 바꿀 수 있습니다.
+시뮬레이터에서 찍을 때는 `xcrun simctl io booted screenshot 파일이름.png` 명령을 씁니다. 언어별(한국어, 영어, 일본어) 화면은 iPhone 설정 → 앱 → BestCut → 언어에서 바꿀 수 있습니다.

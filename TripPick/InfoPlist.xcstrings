@@ -6,25 +6,25 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick"
+            "value": "BestCut"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick"
+            "value": "ベストカット"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick"
+            "value": "베스트컷"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick"
+            "value": "BestCut"
           }
         }
       }
@@ -34,7 +34,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device."
+            "value": "BestCut looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device."
           }
         },
         "ja": {
@@ -52,7 +52,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "TripPick 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
+            "value": "BestCut 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
           }
         }
       }

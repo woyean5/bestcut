@@ -1,6 +1,6 @@
 # App Store 소개 문구 (초안)
 
-앱 이름은 아직 정하지 않아 임시 이름 TripPick으로 썼습니다. 이름이 정해지면 바꿔 주세요.
+앱 이름: BestCut (2026-11-26 결정). 한국어 스토어 이름은 "베스트컷", 일본어는 "ベストカット".
 App Store Connect의 글자 수 제한: 이름 30자, 부제 30자, 키워드 100자(쉼표로 구분), 소개 4000자.
 
 - **카테고리:** 사진 및 비디오
@@ -12,7 +12,7 @@ App Store Connect의 글자 수 제한: 이름 30자, 부제 30자, 키워드 10
 
 ## 한국어
 
-**이름:** TripPick
+**이름:** 베스트컷 - 사진 정리
 **부제:** 여행 사진, 베스트 컷만 남기기
 
 **키워드:** 사진정리,여행사진,베스트컷,흔들린사진,중복사진,비슷한사진,스크린샷정리,앨범,용량정리,사진삭제
@@ -20,7 +20,7 @@ App Store Connect의 글자 수 제한: 이름 30자, 부제 30자, 키워드 10
 **소개:**
 여행 다녀오면 사진이 몇천 장. 같은 장면을 여러 번 찍다 보니 고르기가 너무 힘드셨죠?
 
-TripPick은 여행 기간의 사진을 iPhone 안에서 분석해서, 고르기만 하면 되게 정리해 드려요.
+베스트컷은 여행 기간의 사진을 iPhone 안에서 분석해서, 고르기만 하면 되게 정리해 드려요.
 
 • 비슷한 사진 묶기: 같은 곳에서 연달아 찍은 사진을 한 묶음으로 모아요.
 • 흔들림·어두움 표시: 초점이 나갔거나 흔들린 사진, 너무 어둡거나 하얗게 날아간 사진, 눈 감은 사진을 표시해요.
@@ -40,7 +40,7 @@ TripPick은 여행 기간의 사진을 iPhone 안에서 분석해서, 고르기�
 
 ## English
 
-**Name:** TripPick
+**Name:** BestCut - Photo Cleaner
 **Subtitle:** Keep only your best trip shots
 
 **Keywords:** photo cleaner,travel photos,best shot,blurry,duplicates,similar photos,screenshots,album,storage
@@ -48,7 +48,7 @@ TripPick은 여행 기간의 사진을 iPhone 안에서 분석해서, 고르기�
 **Description:**
 Back from a trip with thousands of photos? You took the same shot five times, and now picking the good ones takes forever.
 
-TripPick looks through your trip on your iPhone and lines everything up so all you have to do is pick.
+BestCut looks through your trip on your iPhone and lines everything up so all you have to do is pick.
 
 • Similar photos, grouped: shots taken in a row at the same spot become one group.
 • Blurry and dark shots, flagged: out-of-focus, shaky, too dark, too bright, and eyes-closed photos are marked.
@@ -68,7 +68,7 @@ Your photos never leave your iPhone. No sign-in, no ads, no tracking.
 
 ## 日本語
 
-**名前:** TripPick
+**名前:** ベストカット - 写真整理
 **サブタイトル:** 旅行写真はベストショットだけ
 
 **キーワード:** 写真整理,旅行写真,ベストショット,ブレ写真,重複写真,似た写真,スクリーンショット,アルバム,容量
@@ -76,7 +76,7 @@ Your photos never leave your iPhone. No sign-in, no ads, no tracking.
 **説明:**
 旅行から帰ると写真が何千枚。同じ場面を何度も撮っていて、良い写真を選ぶのが大変ではありませんか？
 
-TripPickは旅行期間の写真をiPhoneの中で分析し、選ぶだけで済むように整理します。
+ベストカットは旅行期間の写真をiPhoneの中で分析し、選ぶだけで済むように整理します。
 
 • 似た写真をまとめる：同じ場所で続けて撮った写真を1つのグループにまとめます。
 • ブレ・暗い写真に印：ピンぼけやブレ、暗すぎ・明るすぎ、目つぶりの写真に印を付けます。
@@ -96,7 +96,7 @@ TripPickは旅行期間の写真をiPhoneの中で分析し、選ぶだけで済
 
 ## 简体中文
 
-**名称：** TripPick
+**名称：** BestCut - 照片整理
 **副标题：** 旅行照片，只留最佳
 
 **关键词：** 照片整理,旅行照片,最佳照片,模糊照片,重复照片,相似照片,截屏整理,相簿,清理空间
@@ -104,7 +104,7 @@ TripPickは旅行期間の写真をiPhoneの中で分析し、選ぶだけで済
 **描述：**
 旅行回来照片有几千张？同一个场景拍了好几遍，挑出好照片实在太费劲。
 
-TripPick 会在你的 iPhone 上分析旅行期间的照片，帮你整理好，你只需挑选即可。
+BestCut 会在你的 iPhone 上分析旅行期间的照片，帮你整理好，你只需挑选即可。
 
 • 相似照片归组：在同一地点连续拍摄的照片会归为一组。
 • 标出模糊和过暗的照片：对焦失败、手抖、过暗、过亮和闭眼的照片都会被标出。

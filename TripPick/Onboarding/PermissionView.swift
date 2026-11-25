@@ -19,8 +19,8 @@ struct PermissionView: View {
                     .font(.title.bold())
                     .multilineTextAlignment(.center)
                 Text(state == .denied
-                     ? "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings."
-                     : "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.")
+                     ? "BestCut needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings."
+                     : "BestCut finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.")
                     .font(.body)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)

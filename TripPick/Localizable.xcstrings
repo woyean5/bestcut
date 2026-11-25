@@ -625,6 +625,72 @@
         }
       }
     },
+    "BestCut": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ベストカット"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "베스트컷"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BestCut"
+          }
+        }
+      }
+    },
+    "BestCut finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BestCut 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
+          }
+        }
+      }
+    },
+    "BestCut needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BestCut 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
+          }
+        }
+      }
+    },
     "Blurry": {
       "localizations": {
         "ja": {
@@ -691,7 +757,7 @@
         }
       }
     },
-    "Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.": {
+    "Choose the dates of a trip. BestCut groups similar shots and flags blurry ones so you only have to pick.": {
       "localizations": {
         "ja": {
           "stringUnit": {
@@ -708,7 +774,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "选择旅行日期。TripPick 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
+            "value": "选择旅行日期。BestCut 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
           }
         }
       }
@@ -2123,72 +2189,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "旅行名称"
-          }
-        }
-      }
-    },
-    "TripPick": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TripPick"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TripPick"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TripPick"
-          }
-        }
-      }
-    },
-    "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TripPick 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
-          }
-        }
-      }
-    },
-    "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "TripPick 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
           }
         }
       }
