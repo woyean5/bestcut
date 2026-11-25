@@ -1,0 +1,50 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleDisplayName": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick"
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブレた写真や似た写真を見つけるために、このiPhoneの写真を確認します。写真が端末の外に送信されることはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "흔들린 사진과 비슷한 사진을 찾기 위해 이 iPhone의 사진을 살펴봅니다. 사진은 기기 밖으로 나가지 않습니다."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
