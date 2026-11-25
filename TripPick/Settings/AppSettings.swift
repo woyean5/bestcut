@@ -52,6 +52,7 @@ extension SessionSettings {
 /// The app's display language, chosen in Settings. "System" follows the iPhone's language.
 enum AppLanguage: String, CaseIterable, Identifiable {
     case system, ko, en, ja
+    case zhHans = "zh-Hans"
     var id: String { rawValue }
 
     static let storageKey = "appLanguage"
@@ -75,6 +76,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .ko: "한국어"
         case .en: "English"
         case .ja: "日本語"
+        case .zhHans: "简体中文"
         }
     }
 

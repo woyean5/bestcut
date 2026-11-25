@@ -83,3 +83,11 @@ private struct FakeNamer: PlaceNaming {
     #expect(CityName.clean(locality: nil, admin: "Bali", countryCode: "ID", languageCode: "en") == "Bali")
     #expect(CityName.clean(locality: nil, admin: nil, countryCode: nil, languageCode: "en") == nil)
 }
+
+@Test func chineseTitlesAndCityNames() {
+    #expect(TripTitle.join(["纽约", "华盛顿"], languageCode: "zh") == "纽约、华盛顿")
+    #expect(CityName.clean(locality: "上海市", admin: "上海市", countryCode: "CN", languageCode: "zh") == "上海")
+    #expect(CityName.clean(locality: "大阪市", admin: "大阪府", countryCode: "JP", languageCode: "zh") == "大阪")
+    #expect(CityName.clean(locality: "千代田区", admin: "东京都", countryCode: "JP", languageCode: "zh") == "东京")
+    #expect(CityName.clean(locality: "纽约", admin: "NY", countryCode: "US", languageCode: "zh") == "纽约")
+}

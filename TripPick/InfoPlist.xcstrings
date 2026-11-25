@@ -20,6 +20,12 @@
             "state": "translated",
             "value": "TripPick"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick"
+          }
         }
       }
     },
@@ -41,6 +47,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "흔들린 사진과 비슷한 사진을 찾기 위해 이 iPhone의 사진을 살펴봅니다. 사진은 기기 밖으로 나가지 않습니다."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
           }
         }
       }

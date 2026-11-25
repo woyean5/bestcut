@@ -98,6 +98,7 @@
 				en,
 				ko,
 				ja,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = AA00000000000000000000C5;

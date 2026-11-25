@@ -52,11 +52,12 @@ public enum TripTitle {
         return names
     }
 
-    /// "뉴욕·워싱턴", "ニューヨーク・ワシントン", "New York & Washington", "Paris, Lyon & Nice".
+    /// "뉴욕·워싱턴", "ニューヨーク・ワシントン", "纽约、华盛顿", "New York & Washington", "Paris, Lyon & Nice".
     public static func join(_ names: [String], languageCode: String) -> String {
         switch languageCode {
         case "ko": return names.joined(separator: "·")
         case "ja": return names.joined(separator: "・")
+        case "zh": return names.joined(separator: "、")
         default:
             guard names.count > 1 else { return names.first ?? "" }
             return names.dropLast().joined(separator: ", ") + " & " + names.last!

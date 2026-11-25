@@ -6,7 +6,7 @@ Source language is English; the key is the English text."""
 import json, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TRANS = ROOT / "scripts/translations.json"
-LANGS = ["ko", "ja"]
+LANGS = ["ko", "ja", "zh-Hans"]
 
 def extracted():
     keys = set()

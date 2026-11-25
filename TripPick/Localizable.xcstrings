@@ -14,6 +14,12 @@
             "state": "translated",
             "value": "%@ 베스트"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 精选"
+          }
         }
       }
     },
@@ -29,6 +35,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ 스크린샷"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 截屏"
           }
         }
       }
@@ -46,6 +58,12 @@
             "state": "translated",
             "value": "%@ 여행"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@之旅"
+          }
         }
       }
     },
@@ -61,6 +79,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ 비울 수 있어요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可释放 %@"
           }
         }
       }
@@ -80,6 +104,12 @@
           }
         },
         "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld / %2$lld"
@@ -118,6 +148,12 @@
             "state": "translated",
             "value": "%lld묶음"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 组"
+          }
         }
       }
     },
@@ -140,6 +176,12 @@
             "state": "translated",
             "value": "이 묶음 %1$lld장 · %2$lld장 남김"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本组 %1$lld 张 · 保留 %2$lld 张"
+          }
         }
       }
     },
@@ -152,6 +194,12 @@
           }
         },
         "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld / %2$lld"
@@ -190,6 +238,12 @@
             "state": "translated",
             "value": "%lld장"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 张"
+          }
         }
       }
     },
@@ -212,6 +266,12 @@
             "state": "translated",
             "value": "사진 %1$lld장 · 짧은 동영상 %2$lld개"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片 %1$lld 张 · 短视频 %2$lld 个"
+          }
         }
       }
     },
@@ -227,6 +287,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld초 이하"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒以内"
           }
         }
       }
@@ -262,6 +328,12 @@
             "state": "translated",
             "value": "%lld개"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个"
+          }
         }
       }
     },
@@ -284,6 +356,12 @@
             "state": "translated",
             "value": "%1$lld → %2$lld"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld → %2$lld"
+          }
         }
       }
     },
@@ -299,6 +377,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld%% 정리함"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已整理 %lld%%"
           }
         }
       }
@@ -316,6 +400,12 @@
             "state": "translated",
             "value": "약 %@ 비울 수 있어요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "约可释放 %@"
+          }
         }
       }
     },
@@ -332,6 +422,12 @@
             "state": "translated",
             "value": "앨범 이름도 이 언어로 만들어져요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相簿名称也会使用此语言。"
+          }
         }
       }
     },
@@ -347,6 +443,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진 앱에 앨범을 만들었어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已在“照片”中创建相簿。"
           }
         }
       }
@@ -382,6 +484,12 @@
             "state": "translated",
             "value": "앨범을 만들고 %lld개를 지웠어요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已创建相簿，并删除了 %lld 项。"
+          }
         }
       }
     },
@@ -397,6 +505,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "여기는 다 정리했어요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这里已全部整理完"
           }
         }
       }
@@ -414,6 +528,12 @@
             "state": "translated",
             "value": "다 골랐어요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部选好了"
+          }
         }
       }
     },
@@ -429,6 +549,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진 접근 허용"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许访问照片"
           }
         }
       }
@@ -446,6 +572,12 @@
             "state": "translated",
             "value": "화면 모드"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外观"
+          }
         }
       }
     },
@@ -461,6 +593,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "추천"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推荐"
           }
         }
       }
@@ -478,6 +616,12 @@
             "state": "translated",
             "value": "베스트 앨범"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "精选相簿"
+          }
         }
       }
     },
@@ -493,6 +637,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "흔들림"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模糊"
           }
         }
       }
@@ -510,6 +660,12 @@
             "state": "translated",
             "value": "흔들림·어두움"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模糊或过暗"
+          }
         }
       }
     },
@@ -525,6 +681,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "취소"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
           }
         }
       }
@@ -542,6 +704,12 @@
             "state": "translated",
             "value": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择旅行日期。TripPick 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
+          }
         }
       }
     },
@@ -557,6 +725,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "비교"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对比"
           }
         }
       }
@@ -574,6 +748,12 @@
             "state": "translated",
             "value": "이어서 정리하기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续整理"
+          }
         }
       }
     },
@@ -589,6 +769,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "장소 이름을 찾지 못했어요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未能找到地点名称"
           }
         }
       }
@@ -606,6 +792,12 @@
             "state": "translated",
             "value": "사진 보관함을 바꾸지 못했어요. 다시 시도해 주세요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法更新照片图库，请重试。"
+          }
         }
       }
     },
@@ -621,6 +813,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "다크"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深色"
           }
         }
       }
@@ -638,6 +836,12 @@
             "state": "translated",
             "value": "지울 후보"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待删除"
+          }
         }
       }
     },
@@ -653,6 +857,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "지운 사진은 30일 동안 \"최근 삭제된 항목\"에 남아 있어서 되살릴 수 있어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除的照片会在“最近删除”中保留 30 天，仍可恢复。"
           }
         }
       }
@@ -670,6 +880,12 @@
             "state": "translated",
             "value": "사진을 지우면 다른 앨범과 공유 앨범에서도 사라져요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除照片后，它也会从其他相簿和共享相簿中移除。"
+          }
         }
       }
     },
@@ -685,6 +901,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "삭제를 취소했어요. 앨범은 만들어졌어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已取消删除。相簿已创建。"
           }
         }
       }
@@ -702,6 +924,12 @@
             "state": "translated",
             "value": "남기지 않음"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不保留"
+          }
         }
       }
     },
@@ -717,6 +945,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "완료"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
           }
         }
       }
@@ -734,6 +968,12 @@
             "state": "translated",
             "value": "끝"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束"
+          }
         }
       }
     },
@@ -749,6 +989,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "이 목록의 묶음을 모두 정했어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此列表中的所有分组都已决定。"
           }
         }
       }
@@ -766,6 +1012,12 @@
             "state": "translated",
             "value": "모든 분석은 이 iPhone 안에서 이루어집니다."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有分析都在这台 iPhone 上完成。"
+          }
         }
       }
     },
@@ -781,6 +1033,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "눈 감음"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "闭眼"
           }
         }
       }
@@ -798,6 +1056,12 @@
             "state": "translated",
             "value": "즐겨찾기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "个人收藏"
+          }
         }
       }
     },
@@ -814,6 +1078,12 @@
             "state": "translated",
             "value": "묶음마다 가장 선명하고 잘 나온 사진이 미리 선택됩니다."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每组中最清晰、拍得最好的照片会被预先选中。"
+          }
         }
       }
     },
@@ -829,6 +1099,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "남기기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留"
           }
         }
       }
@@ -852,6 +1128,12 @@
             "state": "translated",
             "value": "%1$lld장 남기고 %2$lld장은 지울 후보로"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留 %1$lld 张，%2$lld 张设为待删除"
+          }
         }
       }
     },
@@ -867,6 +1149,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld장 모두 남기기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部保留 %lld 张"
           }
         }
       }
@@ -884,6 +1172,12 @@
             "state": "translated",
             "value": "이걸 남기기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留这张"
+          }
         }
       }
     },
@@ -899,6 +1193,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "남기는 중"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保留"
           }
         }
       }
@@ -916,6 +1216,12 @@
             "state": "translated",
             "value": "언어"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
         }
       }
     },
@@ -931,6 +1237,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "그대로 둠"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持原样"
           }
         }
       }
@@ -948,6 +1260,12 @@
             "state": "translated",
             "value": "라이트"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浅色"
+          }
         }
       }
     },
@@ -963,6 +1281,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "비교할 사진을 하나 더 길게 누르세요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再长按一张照片进行对比"
           }
         }
       }
@@ -980,6 +1304,12 @@
             "state": "translated",
             "value": "사진 두 장을 길게 누르면 나란히 비교해요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长按两张照片即可并排对比"
+          }
         }
       }
     },
@@ -995,6 +1325,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진을 살펴보는 중"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在查看你的照片"
           }
         }
       }
@@ -1012,6 +1348,12 @@
             "state": "translated",
             "value": "앨범 만들고 %lld개 지우기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "创建相簿并删除 %lld 项"
+          }
         }
       }
     },
@@ -1027,6 +1369,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "앨범만 만들기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅创建相簿"
           }
         }
       }
@@ -1044,6 +1392,12 @@
             "state": "translated",
             "value": "%lld장 모두 지울 후보로"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "将 %lld 张全部设为待删除"
+          }
         }
       }
     },
@@ -1059,6 +1413,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "지울 후보"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待删除"
           }
         }
       }
@@ -1076,6 +1436,12 @@
             "state": "translated",
             "value": "더 보기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多"
+          }
         }
       }
     },
@@ -1091,6 +1457,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "장소로 이름 짓기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按地点命名"
           }
         }
       }
@@ -1108,6 +1480,12 @@
             "state": "translated",
             "value": "새 여행"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新旅行"
+          }
         }
       }
     },
@@ -1123,6 +1501,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "여기서 더 정할 사진이 없어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这里没有需要决定的照片了。"
           }
         }
       }
@@ -1140,6 +1524,12 @@
             "state": "translated",
             "value": "확인"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好"
+          }
         }
       }
     },
@@ -1155,6 +1545,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "한 장씩 보기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "逐张查看"
           }
         }
       }
@@ -1172,6 +1568,12 @@
             "state": "translated",
             "value": "설정 열기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开设置"
+          }
         }
       }
     },
@@ -1187,6 +1589,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "새 여행 정리"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理新旅行"
           }
         }
       }
@@ -1204,6 +1612,12 @@
             "state": "translated",
             "value": "첫 여행을 정리해 보세요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "整理你的第一次旅行"
+          }
         }
       }
     },
@@ -1219,6 +1633,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진 접근이 꺼져 있어요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片访问已关闭"
           }
         }
       }
@@ -1236,6 +1656,12 @@
             "state": "translated",
             "value": "여행 베스트 컷만 골라 보세요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只留下旅行中的最佳照片"
+          }
         }
       }
     },
@@ -1251,6 +1677,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "여행 이름 바꾸기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名旅行"
           }
         }
       }
@@ -1268,6 +1700,12 @@
             "state": "translated",
             "value": "결과"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结果"
+          }
         }
       }
     },
@@ -1283,6 +1721,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "저장"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
           }
         }
       }
@@ -1300,6 +1744,12 @@
             "state": "translated",
             "value": "스크린샷 앨범"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "截屏相簿"
+          }
         }
       }
     },
@@ -1315,6 +1765,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "결과 보기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看结果"
           }
         }
       }
@@ -1332,6 +1788,12 @@
             "state": "translated",
             "value": "사진 더 선택"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择更多照片"
+          }
         }
       }
     },
@@ -1347,6 +1809,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "설정"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
           }
         }
       }
@@ -1364,6 +1832,12 @@
             "state": "translated",
             "value": "짧은 동영상"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短视频"
+          }
         }
       }
     },
@@ -1379,6 +1853,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "비슷한 사진 묶음"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相似照片"
           }
         }
       }
@@ -1396,6 +1876,12 @@
             "state": "translated",
             "value": "스크린샷 묶음"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相似截屏"
+          }
         }
       }
     },
@@ -1411,6 +1897,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "한 장짜리 사진"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单张照片"
           }
         }
       }
@@ -1428,6 +1920,12 @@
             "state": "translated",
             "value": "시작"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
+          }
         }
       }
     },
@@ -1443,6 +1941,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "정리 시작"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始整理"
           }
         }
       }
@@ -1460,6 +1964,12 @@
             "state": "translated",
             "value": "추천 사진 자동 선택"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动选择推荐照片"
+          }
         }
       }
     },
@@ -1475,6 +1985,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진을 찍은 장소로 추천한 이름이에요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "根据照片拍摄地点推荐的名称。"
           }
         }
       }
@@ -1492,6 +2008,12 @@
             "state": "translated",
             "value": "스와이프"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "滑动"
+          }
         }
       }
     },
@@ -1507,6 +2029,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "시스템"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
           }
         }
       }
@@ -1524,6 +2052,12 @@
             "state": "translated",
             "value": "끝 날짜가 시작 날짜보다 앞서 있어요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束日期早于开始日期。"
+          }
         }
       }
     },
@@ -1539,6 +2073,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "이 기간에는 사진이 없어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这段时间内没有照片。"
           }
         }
       }
@@ -1556,6 +2096,12 @@
             "state": "translated",
             "value": "노출 과다"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "过亮"
+          }
         }
       }
     },
@@ -1572,6 +2118,12 @@
             "state": "translated",
             "value": "여행 이름"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "旅行名称"
+          }
         }
       }
     },
@@ -1584,6 +2136,12 @@
           }
         },
         "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "TripPick"
@@ -1604,6 +2162,12 @@
             "state": "translated",
             "value": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
+          }
         }
       }
     },
@@ -1619,6 +2183,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TripPick 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
           }
         }
       }
@@ -1636,6 +2206,12 @@
             "state": "translated",
             "value": "되돌리기"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "撤销"
+          }
         }
       }
     },
@@ -1651,6 +2227,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "버전"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
           }
         }
       }
@@ -1668,6 +2250,12 @@
             "state": "translated",
             "value": "이렇게 짧은 동영상은 실수로 찍힌 경우가 많아요. 더 긴 동영상은 보이지 않아요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这么短的视频大多是误拍的。更长的视频不会显示。"
+          }
         }
       }
     },
@@ -1683,6 +2271,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "어느 여행을 정리할까요?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要整理哪次旅行？"
           }
         }
       }
@@ -1700,6 +2294,12 @@
             "state": "translated",
             "value": "일부 사진만 공유되어 있어요"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你只共享了部分照片"
+          }
         }
       }
     },
@@ -1715,6 +2315,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片只在这台 iPhone 上分析，绝不会离开设备。"
           }
         }
       }
@@ -1732,6 +2338,12 @@
             "state": "translated",
             "value": "사진에 위치 정보가 없거나 인터넷에 연결되어 있지 않을 수 있어요."
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片可能没有位置信息，或者你未连接网络。"
+          }
         }
       }
     },
@@ -1748,6 +2360,12 @@
             "state": "translated",
             "value": "내 여행"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我的旅行"
+          }
         }
       }
     },
@@ -1763,6 +2381,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "장이 베스트 앨범에 들어가요"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "张照片将放入精选相簿"
           }
         }
       }

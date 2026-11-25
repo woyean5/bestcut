@@ -3,167 +3,207 @@
   "NSPhotoLibraryUsageDescription": {
    "en": "TripPick looks at your photos on this iPhone to find blurry shots and similar photos. Your photos never leave your device.",
    "ko": "흔들린 사진과 비슷한 사진을 찾기 위해 이 iPhone의 사진을 살펴봅니다. 사진은 기기 밖으로 나가지 않습니다.",
-   "ja": "ブレた写真や似た写真を見つけるために、このiPhoneの写真を確認します。写真が端末の外に送信されることはありません。"
+   "ja": "ブレた写真や似た写真を見つけるために、このiPhoneの写真を確認します。写真が端末の外に送信されることはありません。",
+   "zh-Hans": "TripPick 会查看这台 iPhone 上的照片，以找出模糊和相似的照片。你的照片绝不会离开设备。"
   },
   "CFBundleDisplayName": {
    "en": "TripPick",
    "ko": "TripPick",
-   "ja": "TripPick"
+   "ja": "TripPick",
+   "zh-Hans": "TripPick"
   }
  },
  "strings": {
   "%lld of %lld": {
    "ko": "%1$lld / %2$lld",
-   "ja": "%1$lld / %2$lld"
+   "ja": "%1$lld / %2$lld",
+   "zh-Hans": "%1$lld / %2$lld"
   },
   "%lld photos · %lld short videos": {
    "en": "%1$lld photos · %2$lld short videos",
    "ko": "사진 %1$lld장 · 짧은 동영상 %2$lld개",
-   "ja": "写真%1$lld枚・短い動画%2$lld本"
+   "ja": "写真%1$lld枚・短い動画%2$lld本",
+   "zh-Hans": "照片 %1$lld 张 · 短视频 %2$lld 个"
   },
   "%lld sec or less": {
    "ko": "%lld초 이하",
-   "ja": "%lld秒以下"
+   "ja": "%lld秒以下",
+   "zh-Hans": "%lld 秒以内"
   },
   "Allow photo access": {
    "ko": "사진 접근 허용",
-   "ja": "写真へのアクセスを許可"
+   "ja": "写真へのアクセスを許可",
+   "zh-Hans": "允许访问照片"
   },
   "Appearance": {
    "ko": "화면 모드",
-   "ja": "外観モード"
+   "ja": "外観モード",
+   "zh-Hans": "外观"
   },
   "Cancel": {
    "ko": "취소",
-   "ja": "キャンセル"
+   "ja": "キャンセル",
+   "zh-Hans": "取消"
   },
   "Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.": {
    "ko": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.",
-   "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。"
+   "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。",
+   "zh-Hans": "选择旅行日期。TripPick 会把相似的照片归为一组，并标出模糊的照片，你只需挑选即可。"
   },
   "Dark": {
    "ko": "다크",
-   "ja": "ダーク"
+   "ja": "ダーク",
+   "zh-Hans": "深色"
   },
   "Done": {
    "ko": "완료",
-   "ja": "完了"
+   "ja": "完了",
+   "zh-Hans": "完成"
   },
   "End": {
    "ko": "끝",
-   "ja": "終了"
+   "ja": "終了",
+   "zh-Hans": "结束"
   },
   "Everything happens on this iPhone.": {
    "ko": "모든 분석은 이 iPhone 안에서 이루어집니다.",
-   "ja": "すべての処理はこのiPhoneの中で行われます。"
+   "ja": "すべての処理はこのiPhoneの中で行われます。",
+   "zh-Hans": "所有分析都在这台 iPhone 上完成。"
   },
   "In each group, the sharpest and best-looking photo starts out selected.": {
    "ko": "묶음마다 가장 선명하고 잘 나온 사진이 미리 선택됩니다.",
-   "ja": "各グループで、いちばん鮮明でよく撮れた写真が最初から選択されます。"
+   "ja": "各グループで、いちばん鮮明でよく撮れた写真が最初から選択されます。",
+   "zh-Hans": "每组中最清晰、拍得最好的照片会被预先选中。"
   },
   "Light": {
    "ko": "라이트",
-   "ja": "ライト"
+   "ja": "ライト",
+   "zh-Hans": "浅色"
   },
   "Looking through your photos": {
    "ko": "사진을 살펴보는 중",
-   "ja": "写真を確認しています"
+   "ja": "写真を確認しています",
+   "zh-Hans": "正在查看你的照片"
   },
   "New trip": {
    "ko": "새 여행",
-   "ja": "新しい旅行"
+   "ja": "新しい旅行",
+   "zh-Hans": "新旅行"
   },
   "Open Settings": {
    "ko": "설정 열기",
-   "ja": "設定を開く"
+   "ja": "設定を開く",
+   "zh-Hans": "打开设置"
   },
   "Organize a new trip": {
    "ko": "새 여행 정리",
-   "ja": "新しい旅行を整理"
+   "ja": "新しい旅行を整理",
+   "zh-Hans": "整理新旅行"
   },
   "Organize your first trip": {
    "ko": "첫 여행을 정리해 보세요",
-   "ja": "最初の旅行を整理しましょう"
+   "ja": "最初の旅行を整理しましょう",
+   "zh-Hans": "整理你的第一次旅行"
   },
   "Photo access is off": {
    "ko": "사진 접근이 꺼져 있어요",
-   "ja": "写真へのアクセスがオフです"
+   "ja": "写真へのアクセスがオフです",
+   "zh-Hans": "照片访问已关闭"
   },
   "Pick your best travel shots": {
    "ko": "여행 베스트 컷만 골라 보세요",
-   "ja": "旅行のベストショットだけを選びましょう"
+   "ja": "旅行のベストショットだけを選びましょう",
+   "zh-Hans": "只留下旅行中的最佳照片"
   },
   "Select more photos": {
    "ko": "사진 더 선택",
-   "ja": "写真をさらに選択"
+   "ja": "写真をさらに選択",
+   "zh-Hans": "选择更多照片"
   },
   "Settings": {
    "ko": "설정",
-   "ja": "設定"
+   "ja": "設定",
+   "zh-Hans": "设置"
   },
   "Short videos": {
    "ko": "짧은 동영상",
-   "ja": "短い動画"
+   "ja": "短い動画",
+   "zh-Hans": "短视频"
   },
   "Start": {
    "ko": "시작",
-   "ja": "開始"
+   "ja": "開始",
+   "zh-Hans": "开始"
   },
   "Start organizing": {
    "ko": "정리 시작",
-   "ja": "整理を始める"
+   "ja": "整理を始める",
+   "zh-Hans": "开始整理"
   },
   "Suggest the best shot": {
    "ko": "추천 사진 자동 선택",
-   "ja": "おすすめ写真を自動で選択"
+   "ja": "おすすめ写真を自動で選択",
+   "zh-Hans": "自动选择推荐照片"
   },
   "System": {
    "ko": "시스템",
-   "ja": "システム"
+   "ja": "システム",
+   "zh-Hans": "跟随系统"
   },
   "The end date is before the start date.": {
    "ko": "끝 날짜가 시작 날짜보다 앞서 있어요.",
-   "ja": "終了日が開始日より前になっています。"
+   "ja": "終了日が開始日より前になっています。",
+   "zh-Hans": "结束日期早于开始日期。"
   },
   "There are no photos on these dates.": {
    "ko": "이 기간에는 사진이 없어요.",
-   "ja": "この期間には写真がありません。"
+   "ja": "この期間には写真がありません。",
+   "zh-Hans": "这段时间内没有照片。"
   },
   "TripPick": {
    "ko": "TripPick",
-   "ja": "TripPick"
+   "ja": "TripPick",
+   "zh-Hans": "TripPick"
   },
   "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
    "ko": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
-   "ja": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
+   "ja": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。",
+   "zh-Hans": "TripPick 会找出模糊的照片并把相似照片归为一组，你只需挑选即可。照片只在这台 iPhone 上分析，绝不会离开设备。"
   },
   "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
    "ko": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요.",
-   "ja": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。"
+   "ja": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。",
+   "zh-Hans": "TripPick 需要访问你的照片，才能找出模糊照片并整理相似照片。你可以在“设置”中开启。"
   },
   "Version": {
    "ko": "버전",
-   "ja": "バージョン"
+   "ja": "バージョン",
+   "zh-Hans": "版本"
   },
   "Videos this short are often taken by accident. Longer videos aren't shown.": {
    "ko": "이렇게 짧은 동영상은 실수로 찍힌 경우가 많아요. 더 긴 동영상은 보이지 않아요.",
-   "ja": "このくらい短い動画は誤って撮影されたことが多いです。これより長い動画は表示されません。"
+   "ja": "このくらい短い動画は誤って撮影されたことが多いです。これより長い動画は表示されません。",
+   "zh-Hans": "这么短的视频大多是误拍的。更长的视频不会显示。"
   },
   "Which trip should we organize?": {
    "ko": "어느 여행을 정리할까요?",
-   "ja": "どの旅行を整理しますか？"
+   "ja": "どの旅行を整理しますか？",
+   "zh-Hans": "要整理哪次旅行？"
   },
   "You've shared only some photos": {
    "ko": "일부 사진만 공유되어 있어요",
-   "ja": "一部の写真だけが共有されています"
+   "ja": "一部の写真だけが共有されています",
+   "zh-Hans": "你只共享了部分照片"
   },
   "Your photos are analyzed on this iPhone and never leave it.": {
    "ko": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
-   "ja": "写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
+   "ja": "写真はこのiPhoneの中だけで分析され、外に送信されることはありません。",
+   "zh-Hans": "照片只在这台 iPhone 上分析，绝不会离开设备。"
   },
   "Your trips": {
    "ko": "내 여행",
-   "ja": "旅行一覧"
+   "ja": "旅行一覧",
+   "zh-Hans": "我的旅行"
   },
   "%lld groups": {
    "en": {
@@ -171,7 +211,8 @@
     "other": "%lld groups"
    },
    "ko": "%lld묶음",
-   "ja": "%lldグループ"
+   "ja": "%lldグループ",
+   "zh-Hans": "%lld 组"
   },
   "%lld photos": {
    "en": {
@@ -179,7 +220,8 @@
     "other": "%lld photos"
    },
    "ko": "%lld장",
-   "ja": "%lld枚"
+   "ja": "%lld枚",
+   "zh-Hans": "%lld 张"
   },
   "%lld videos": {
    "en": {
@@ -187,165 +229,205 @@
     "other": "%lld videos"
    },
    "ko": "%lld개",
-   "ja": "%lld本"
+   "ja": "%lld本",
+   "zh-Hans": "%lld 个"
   },
   "%lld%% organized": {
    "ko": "%lld%% 정리함",
-   "ja": "%lld%% 整理済み"
+   "ja": "%lld%% 整理済み",
+   "zh-Hans": "已整理 %lld%%"
   },
   "All done here": {
    "ko": "여기는 다 정리했어요",
-   "ja": "ここは整理済みです"
+   "ja": "ここは整理済みです",
+   "zh-Hans": "这里已全部整理完"
   },
   "Best": {
    "ko": "추천",
-   "ja": "おすすめ"
+   "ja": "おすすめ",
+   "zh-Hans": "推荐"
   },
   "Blurry": {
    "ko": "흔들림",
-   "ja": "ブレ"
+   "ja": "ブレ",
+   "zh-Hans": "模糊"
   },
   "Blurry or dark": {
    "ko": "흔들림·어두움",
-   "ja": "ブレ・暗い写真"
+   "ja": "ブレ・暗い写真",
+   "zh-Hans": "模糊或过暗"
   },
   "Compare": {
    "ko": "비교",
-   "ja": "比較"
+   "ja": "比較",
+   "zh-Hans": "对比"
   },
   "Continue organizing": {
    "ko": "이어서 정리하기",
-   "ja": "続きから整理"
+   "ja": "続きから整理",
+   "zh-Hans": "继续整理"
   },
   "Don't keep": {
    "ko": "남기지 않음",
-   "ja": "残さない"
+   "ja": "残さない",
+   "zh-Hans": "不保留"
   },
   "Every group in this list is decided.": {
    "ko": "이 목록의 묶음을 모두 정했어요.",
-   "ja": "このリストのグループはすべて決定済みです。"
+   "ja": "このリストのグループはすべて決定済みです。",
+   "zh-Hans": "此列表中的所有分组都已决定。"
   },
   "Eyes closed": {
    "ko": "눈 감음",
-   "ja": "目つぶり"
+   "ja": "目つぶり",
+   "zh-Hans": "闭眼"
   },
   "Favorite": {
    "ko": "즐겨찾기",
-   "ja": "お気に入り"
+   "ja": "お気に入り",
+   "zh-Hans": "个人收藏"
   },
   "Keep": {
    "ko": "남기기",
-   "ja": "残す"
+   "ja": "残す",
+   "zh-Hans": "保留"
   },
   "Keep this": {
    "ko": "이걸 남기기",
-   "ja": "これを残す"
+   "ja": "これを残す",
+   "zh-Hans": "保留这张"
   },
   "Keeping": {
    "ko": "남기는 중",
-   "ja": "残す"
+   "ja": "残す",
+   "zh-Hans": "保留"
   },
   "Long-press another photo to compare": {
    "ko": "비교할 사진을 하나 더 길게 누르세요",
-   "ja": "比べる写真をもう1枚長押ししてください"
+   "ja": "比べる写真をもう1枚長押ししてください",
+   "zh-Hans": "再长按一张照片进行对比"
   },
   "Long-press two photos to compare them": {
    "ko": "사진 두 장을 길게 누르면 나란히 비교해요",
-   "ja": "2枚の写真を長押しすると並べて比較できます"
+   "ja": "2枚の写真を長押しすると並べて比較できます",
+   "zh-Hans": "长按两张照片即可并排对比"
   },
   "More": {
    "ko": "더 보기",
-   "ja": "その他"
+   "ja": "その他",
+   "zh-Hans": "更多"
   },
   "Rename trip": {
    "ko": "여행 이름 바꾸기",
-   "ja": "旅行名を変更"
+   "ja": "旅行名を変更",
+   "zh-Hans": "重命名旅行"
   },
   "Results": {
    "ko": "결과",
-   "ja": "結果"
+   "ja": "結果",
+   "zh-Hans": "结果"
   },
   "Save": {
    "ko": "저장",
-   "ja": "保存"
+   "ja": "保存",
+   "zh-Hans": "保存"
   },
   "Similar photos": {
    "ko": "비슷한 사진 묶음",
-   "ja": "似た写真のグループ"
+   "ja": "似た写真のグループ",
+   "zh-Hans": "相似照片"
   },
   "Similar screenshots": {
    "ko": "스크린샷 묶음",
-   "ja": "スクリーンショットのグループ"
+   "ja": "スクリーンショットのグループ",
+   "zh-Hans": "相似截屏"
   },
   "Single photos": {
    "ko": "한 장짜리 사진",
-   "ja": "1枚だけの写真"
+   "ja": "1枚だけの写真",
+   "zh-Hans": "单张照片"
   },
   "Swipe": {
    "ko": "스와이프",
-   "ja": "スワイプ"
+   "ja": "スワイプ",
+   "zh-Hans": "滑动"
   },
   "Too bright": {
    "ko": "노출 과다",
-   "ja": "明るすぎ"
+   "ja": "明るすぎ",
+   "zh-Hans": "过亮"
   },
   "Trip name": {
    "ko": "여행 이름",
-   "ja": "旅行名"
+   "ja": "旅行名",
+   "zh-Hans": "旅行名称"
   },
   "%lld / %lld": {
    "en": "%1$lld / %2$lld",
    "ko": "%1$lld / %2$lld",
-   "ja": "%1$lld / %2$lld"
+   "ja": "%1$lld / %2$lld",
+   "zh-Hans": "%1$lld / %2$lld"
   },
   "All picked": {
    "ko": "다 골랐어요",
-   "ja": "選び終わりました"
+   "ja": "選び終わりました",
+   "zh-Hans": "全部选好了"
   },
   "Delete later": {
    "ko": "지울 후보",
-   "ja": "削除候補"
+   "ja": "削除候補",
+   "zh-Hans": "待删除"
   },
   "Nothing left to decide here.": {
    "ko": "여기서 더 정할 사진이 없어요.",
-   "ja": "ここで決める写真はもうありません。"
+   "ja": "ここで決める写真はもうありません。",
+   "zh-Hans": "这里没有需要决定的照片了。"
   },
   "One by one": {
    "ko": "한 장씩 보기",
-   "ja": "1枚ずつ見る"
+   "ja": "1枚ずつ見る",
+   "zh-Hans": "逐张查看"
   },
   "See results": {
    "ko": "결과 보기",
-   "ja": "結果を見る"
+   "ja": "結果を見る",
+   "zh-Hans": "查看结果"
   },
   "Undo": {
    "ko": "되돌리기",
-   "ja": "取り消す"
+   "ja": "取り消す",
+   "zh-Hans": "撤销"
   },
   "%@ Best": {
    "ko": "%@ 베스트",
-   "ja": "%@ ベスト"
+   "ja": "%@ ベスト",
+   "zh-Hans": "%@ 精选"
   },
   "%@ Screenshots": {
    "ko": "%@ 스크린샷",
-   "ja": "%@ スクリーンショット"
+   "ja": "%@ スクリーンショット",
+   "zh-Hans": "%@ 截屏"
   },
   "%@ can be freed": {
    "ko": "%@ 비울 수 있어요",
-   "ja": "%@ 空けられます"
+   "ja": "%@ 空けられます",
+   "zh-Hans": "可释放 %@"
   },
   "%lld → %lld": {
    "en": "%1$lld → %2$lld",
    "ko": "%1$lld → %2$lld",
-   "ja": "%1$lld → %2$lld"
+   "ja": "%1$lld → %2$lld",
+   "zh-Hans": "%1$lld → %2$lld"
   },
   "About %@ can be freed": {
    "ko": "약 %@ 비울 수 있어요",
-   "ja": "約%@ 空けられます"
+   "ja": "約%@ 空けられます",
+   "zh-Hans": "约可释放 %@"
   },
   "Albums are ready in Photos.": {
    "ko": "사진 앱에 앨범을 만들었어요.",
-   "ja": "写真アプリにアルバムを作成しました。"
+   "ja": "写真アプリにアルバムを作成しました。",
+   "zh-Hans": "已在“照片”中创建相簿。"
   },
   "Albums are ready, and %lld items were deleted.": {
    "en": {
@@ -353,101 +435,125 @@
     "other": "Albums are ready, and %lld items were deleted."
    },
    "ko": "앨범을 만들고 %lld개를 지웠어요.",
-   "ja": "アルバムを作成し、%lld件を削除しました。"
+   "ja": "アルバムを作成し、%lld件を削除しました。",
+   "zh-Hans": "已创建相簿，并删除了 %lld 项。"
   },
   "Best album": {
    "ko": "베스트 앨범",
-   "ja": "ベストアルバム"
+   "ja": "ベストアルバム",
+   "zh-Hans": "精选相簿"
   },
   "Couldn't update your photo library. Try again.": {
    "ko": "사진 보관함을 바꾸지 못했어요. 다시 시도해 주세요.",
-   "ja": "写真ライブラリを更新できませんでした。もう一度お試しください。"
+   "ja": "写真ライブラリを更新できませんでした。もう一度お試しください。",
+   "zh-Hans": "无法更新照片图库，请重试。"
   },
   "Deleted photos stay in Recently Deleted for 30 days, so you can still recover them.": {
    "ko": "지운 사진은 30일 동안 \"최근 삭제된 항목\"에 남아 있어서 되살릴 수 있어요.",
-   "ja": "削除した写真は30日間「最近削除した項目」に残るので、復元できます。"
+   "ja": "削除した写真は30日間「最近削除した項目」に残るので、復元できます。",
+   "zh-Hans": "删除的照片会在“最近删除”中保留 30 天，仍可恢复。"
   },
   "Deleting a photo also removes it from other albums and shared albums.": {
    "ko": "사진을 지우면 다른 앨범과 공유 앨범에서도 사라져요.",
-   "ja": "写真を削除すると、ほかのアルバムや共有アルバムからも消えます。"
+   "ja": "写真を削除すると、ほかのアルバムや共有アルバムからも消えます。",
+   "zh-Hans": "删除照片后，它也会从其他相簿和共享相簿中移除。"
   },
   "Deletion was canceled. Your albums are ready.": {
    "ko": "삭제를 취소했어요. 앨범은 만들어졌어요.",
-   "ja": "削除をキャンセルしました。アルバムは作成済みです。"
+   "ja": "削除をキャンセルしました。アルバムは作成済みです。",
+   "zh-Hans": "已取消删除。相簿已创建。"
   },
   "Left as they are": {
    "ko": "그대로 둠",
-   "ja": "そのまま"
+   "ja": "そのまま",
+   "zh-Hans": "保持原样"
   },
   "Make albums and delete %lld": {
    "ko": "앨범 만들고 %lld개 지우기",
-   "ja": "アルバムを作成して%lld件を削除"
+   "ja": "アルバムを作成して%lld件を削除",
+   "zh-Hans": "创建相簿并删除 %lld 项"
   },
   "Make albums only": {
    "ko": "앨범만 만들기",
-   "ja": "アルバムだけ作成"
+   "ja": "アルバムだけ作成",
+   "zh-Hans": "仅创建相簿"
   },
   "Marked for deletion": {
    "ko": "지울 후보",
-   "ja": "削除候補"
+   "ja": "削除候補",
+   "zh-Hans": "待删除"
   },
   "Screenshot album": {
    "ko": "스크린샷 앨범",
-   "ja": "スクリーンショットのアルバム"
+   "ja": "スクリーンショットのアルバム",
+   "zh-Hans": "截屏相簿"
   },
   "photos in your best album": {
    "ko": "장이 베스트 앨범에 들어가요",
-   "ja": "枚がベストアルバムに入ります"
+   "ja": "枚がベストアルバムに入ります",
+   "zh-Hans": "张照片将放入精选相簿"
   },
   "%lld in this group · %lld kept": {
    "en": "%1$lld in this group · %2$lld kept",
    "ko": "이 묶음 %1$lld장 · %2$lld장 남김",
-   "ja": "このグループ%1$lld枚・%2$lld枚を残す"
+   "ja": "このグループ%1$lld枚・%2$lld枚を残す",
+   "zh-Hans": "本组 %1$lld 张 · 保留 %2$lld 张"
   },
   "Keep %lld · mark %lld for deletion": {
    "en": "Keep %1$lld · mark %2$lld for deletion",
    "ko": "%1$lld장 남기고 %2$lld장은 지울 후보로",
-   "ja": "%1$lld枚を残し、%2$lld枚を削除候補に"
+   "ja": "%1$lld枚を残し、%2$lld枚を削除候補に",
+   "zh-Hans": "保留 %1$lld 张，%2$lld 张设为待删除"
   },
   "Keep all %lld": {
    "ko": "%lld장 모두 남기기",
-   "ja": "%lld枚すべて残す"
+   "ja": "%lld枚すべて残す",
+   "zh-Hans": "全部保留 %lld 张"
   },
   "Mark all %lld for deletion": {
    "ko": "%lld장 모두 지울 후보로",
-   "ja": "%lld枚すべて削除候補に"
+   "ja": "%lld枚すべて削除候補に",
+   "zh-Hans": "将 %lld 张全部设为待删除"
   },
   "Album names follow this language too.": {
    "ko": "앨범 이름도 이 언어로 만들어져요.",
-   "ja": "アルバム名もこの言語で作成されます。"
+   "ja": "アルバム名もこの言語で作成されます。",
+   "zh-Hans": "相簿名称也会使用此语言。"
   },
   "Language": {
    "ko": "언어",
-   "ja": "言語"
+   "ja": "言語",
+   "zh-Hans": "语言"
   },
   "%@ Trip": {
    "ko": "%@ 여행",
-   "ja": "%@旅行"
+   "ja": "%@旅行",
+   "zh-Hans": "%@之旅"
   },
   "Couldn't find place names": {
    "ko": "장소 이름을 찾지 못했어요",
-   "ja": "場所の名前が見つかりませんでした"
+   "ja": "場所の名前が見つかりませんでした",
+   "zh-Hans": "未能找到地点名称"
   },
   "Name from places": {
    "ko": "장소로 이름 짓기",
-   "ja": "場所から名前を付ける"
+   "ja": "場所から名前を付ける",
+   "zh-Hans": "按地点命名"
   },
   "OK": {
    "ko": "확인",
-   "ja": "OK"
+   "ja": "OK",
+   "zh-Hans": "好"
   },
   "Suggested from where your photos were taken.": {
    "ko": "사진을 찍은 장소로 추천한 이름이에요.",
-   "ja": "写真を撮った場所からおすすめした名前です。"
+   "ja": "写真を撮った場所からおすすめした名前です。",
+   "zh-Hans": "根据照片拍摄地点推荐的名称。"
   },
   "Your photos may have no location, or you may be offline.": {
    "ko": "사진에 위치 정보가 없거나 인터넷에 연결되어 있지 않을 수 있어요.",
-   "ja": "写真に位置情報がないか、インターネットに接続されていない可能性があります。"
+   "ja": "写真に位置情報がないか、インターネットに接続されていない可能性があります。",
+   "zh-Hans": "照片可能没有位置信息，或者你未连接网络。"
   }
  }
 }

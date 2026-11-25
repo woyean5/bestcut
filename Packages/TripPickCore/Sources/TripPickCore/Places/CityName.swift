@@ -1,9 +1,10 @@
 /// Turns map address parts into the name people use for a city in a trip title.
 public enum CityName {
-    private static let tokyoNames: Set<String> = ["도쿄", "Tokyo", "東京都", "東京"]
+    private static let tokyoNames: Set<String> = ["도쿄", "Tokyo", "東京都", "東京", "东京都", "东京"]
     private static let suffixes: [String: [String]] = [
         "ko": ["특별자치시", "특별시", "광역시", "시"],
         "ja": ["都", "市"],
+        "zh": ["都", "市"],
         "en": ["-si", "-shi"],
     ]
 
