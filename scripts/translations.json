@@ -424,6 +424,30 @@
   "Language": {
    "ko": "언어",
    "ja": "言語"
+  },
+  "%@ Trip": {
+   "ko": "%@ 여행",
+   "ja": "%@旅行"
+  },
+  "Couldn't find place names": {
+   "ko": "장소 이름을 찾지 못했어요",
+   "ja": "場所の名前が見つかりませんでした"
+  },
+  "Name from places": {
+   "ko": "장소로 이름 짓기",
+   "ja": "場所から名前を付ける"
+  },
+  "OK": {
+   "ko": "확인",
+   "ja": "OK"
+  },
+  "Suggested from where your photos were taken.": {
+   "ko": "사진을 찍은 장소로 추천한 이름이에요.",
+   "ja": "写真を撮った場所からおすすめした名前です。"
+  },
+  "Your photos may have no location, or you may be offline.": {
+   "ko": "사진에 위치 정보가 없거나 인터넷에 연결되어 있지 않을 수 있어요.",
+   "ja": "写真に位置情報がないか、インターネットに接続されていない可能性があります。"
   }
  }
 }

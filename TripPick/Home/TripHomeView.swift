@@ -14,6 +14,8 @@ struct TripHomeView: View {
     let trip: TripRecord
     @State private var renaming = false
     @State private var newName = ""
+    @State private var naming = false
+    @State private var namingFailed = false
 
     var body: some View {
         List {
@@ -58,6 +60,8 @@ struct TripHomeView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu("More", systemImage: "ellipsis") {
                     Button("Rename trip", systemImage: "pencil") { newName = trip.name; renaming = true }
+                    Button("Name from places", systemImage: "mappin.and.ellipse") { Task { await nameFromPlaces() } }
+                        .disabled(naming)
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -72,12 +76,28 @@ struct TripHomeView: View {
                 if !name.isEmpty { trip.name = name; try? context.save() }
             }
         }
+        .alert("Couldn't find place names", isPresented: $namingFailed) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Your photos may have no location, or you may be offline.")
+        }
         .navigationDestination(for: HomeRoute.self) { route in
             switch route {
             case .review(let queue): ReviewSetView(session: session, queue: queue)
             case .swipe(let singlesOnly): SwipeReviewView(session: session, singlesOnly: singlesOnly)
             case .summary: SummaryView(session: session, tripName: trip.name)
             }
+        }
+    }
+
+    private func nameFromPlaces() async {
+        naming = true
+        defer { naming = false }
+        if let name = await TripNaming.suggestedName(for: Array(session.items.values)) {
+            trip.name = name
+            try? context.save()
+        } else {
+            namingFailed = true
         }
     }
 

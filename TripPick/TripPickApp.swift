@@ -51,10 +51,12 @@ struct RootView: View {
                 PermissionView(state: model.permission)
             }
         }
-        .preferredColorScheme(AppearanceMode(rawValue: appearance)?.colorScheme)
         .environment(\.locale, (AppLanguage(rawValue: language) ?? .system).locale)
         .onChange(of: scenePhase) { _, phase in
             if phase == .active { model.refreshPermission() }
         }
+        // Set on the window itself so open sheets change at once and "System" truly goes back to the iPhone setting.
+        .onAppear { (AppearanceMode(rawValue: appearance) ?? .system).applyToWindows() }
+        .onChange(of: appearance) { _, new in (AppearanceMode(rawValue: new) ?? .system).applyToWindows() }
     }
 }

@@ -33,6 +33,22 @@
         }
       }
     },
+    "%@ Trip": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@旅行"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 여행"
+          }
+        }
+      }
+    },
     "%@ can be freed": {
       "localizations": {
         "ja": {
@@ -561,6 +577,22 @@
         }
       }
     },
+    "Couldn't find place names": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "場所の名前が見つかりませんでした"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "장소 이름을 찾지 못했어요"
+          }
+        }
+      }
+    },
     "Couldn't update your photo library. Try again.": {
       "localizations": {
         "ja": {
@@ -1047,6 +1079,22 @@
         }
       }
     },
+    "Name from places": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "場所から名前を付ける"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "장소로 이름 짓기"
+          }
+        }
+      }
+    },
     "New trip": {
       "localizations": {
         "ja": {
@@ -1075,6 +1123,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "여기서 더 정할 사진이 없어요."
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인"
           }
         }
       }
@@ -1399,6 +1463,22 @@
         }
       }
     },
+    "Suggested from where your photos were taken.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真を撮った場所からおすすめした名前です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진을 찍은 장소로 추천한 이름이에요."
+          }
+        }
+      }
+    },
     "Swipe": {
       "localizations": {
         "ja": {
@@ -1635,6 +1715,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요."
+          }
+        }
+      }
+    },
+    "Your photos may have no location, or you may be offline.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真に位置情報がないか、インターネットに接続されていない可能性があります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진에 위치 정보가 없거나 인터넷에 연결되어 있지 않을 수 있어요."
           }
         }
       }

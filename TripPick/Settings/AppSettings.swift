@@ -19,6 +19,17 @@ enum AppearanceMode: String, CaseIterable, Identifiable {
         }
     }
 
+    @MainActor func applyToWindows() {
+        let style: UIUserInterfaceStyle = switch self {
+        case .system: .unspecified
+        case .light: .light
+        case .dark: .dark
+        }
+        for scene in UIApplication.shared.connectedScenes {
+            for window in (scene as? UIWindowScene)?.windows ?? [] { window.overrideUserInterfaceStyle = style }
+        }
+    }
+
     var label: LocalizedStringKey {
         switch self {
         case .system: "System"

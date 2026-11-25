@@ -12,6 +12,10 @@ struct NewTripView: View {
     @State private var end = Date.now
     @State private var media: [MediaItem] = []
     @State private var loading = false
+    @State private var name = ""
+    @State private var nameEdited = false
+    @State private var suggesting = false
+    @State private var isSuggested = false
 
     private var range: TripRange { TripRange(start: start, end: end) }
     private var handled: [MediaItem] {
@@ -30,6 +34,17 @@ struct NewTripView: View {
                     Text("Which trip should we organize?")
                 }
                 Section {
+                    HStack {
+                        TextField("Trip name", text: Binding(get: { name }, set: { name = $0; nameEdited = true; isSuggested = false }),
+                                  prompt: Text(verbatim: TripName.dates(range)))
+                        if suggesting { ProgressView() }
+                    }
+                } header: {
+                    Text("Trip name")
+                } footer: {
+                    if isSuggested { Label("Suggested from where your photos were taken.", systemImage: "mappin.and.ellipse") }
+                }
+                Section {
                     if loading {
                         ProgressView()
                     } else {
@@ -40,8 +55,9 @@ struct NewTripView: View {
                         if !handled.isEmpty {
                         LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 4), count: 4), spacing: 4) {
                             ForEach(handled.prefix(8)) { item in
-                                AssetImageView(id: item.id, maxPixel: 200)
+                                Color.clear
                                     .aspectRatio(1, contentMode: .fit)
+                                    .overlay { AssetImageView(id: item.id, maxPixel: 200) }
                                     .clipShape(.rect(cornerRadius: 6))
                             }
                         }
@@ -75,12 +91,26 @@ struct NewTripView: View {
     private func load() async {
         guard let interval = range.interval else { media = []; return }
         loading = true
-        media = await model.library.fetchMedia(in: interval)
+        let fetched = await model.library.fetchMedia(in: interval)
+        guard !Task.isCancelled else { return }
+        media = fetched
         loading = false
+        await suggestName()
+    }
+
+    private func suggestName() async {
+        guard !nameEdited else { return }
+        suggesting = true
+        let suggestion = await TripNaming.suggestedName(for: handled)
+        suggesting = false
+        guard !Task.isCancelled, !nameEdited else { return }
+        name = suggestion ?? ""
+        isSuggested = suggestion != nil
     }
 
     private func create() {
-        let trip = TripRecord(name: TripName.dates(range), startDate: start, endDate: end)
+        let typed = name.trimmingCharacters(in: .whitespaces)
+        let trip = TripRecord(name: typed.isEmpty ? TripName.dates(range) : typed, startDate: start, endDate: end)
         context.insert(trip)
         try? context.save()
         dismiss()

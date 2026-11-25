@@ -72,14 +72,17 @@ struct SwipeReviewView: View {
 
     /// The whole photo, never cropped: a blurred copy fills the card behind it.
     private func card(_ id: String, size: CGSize) -> some View {
-        ZStack {
-            AssetImageView(id: id, maxPixel: 120, contentMode: .fill)
-                .blur(radius: 24)
-                .opacity(0.6)
-            AssetImageView(id: id, maxPixel: 1400, contentMode: .fit, isVideo: session.items[id]?.kind == .video)
-        }
-        .frame(width: size.width, height: size.height)
-        .background(.black)
+        // Both layers take the card's size from the overlay, so a wide photo can't stretch the card.
+        Color.black
+            .frame(width: size.width, height: size.height)
+            .overlay {
+                AssetImageView(id: id, maxPixel: 120, contentMode: .fill)
+                    .blur(radius: 24)
+                    .opacity(0.6)
+            }
+            .overlay {
+                AssetImageView(id: id, maxPixel: 1400, contentMode: .fit, isVideo: session.items[id]?.kind == .video)
+            }
         .clipShape(.rect(cornerRadius: 28))
             .overlay(alignment: .topLeading) {
                 BadgeRow(flags: session.analyses[id]?.flags ?? [], isFavorite: session.items[id]?.isFavorite ?? false)
