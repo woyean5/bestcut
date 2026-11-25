@@ -42,10 +42,13 @@ struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(AppSettingsKey.appearance) private var appearance = AppearanceMode.system.rawValue
     @AppStorage(AppLanguage.storageKey) private var language = AppLanguage.system.rawValue
+    @AppStorage("hasSeenWelcome") private var hasSeenWelcome = false
 
     var body: some View {
         Group {
-            if model.permission.canUseLibrary {
+            if !hasSeenWelcome {
+                WelcomeView { hasSeenWelcome = true }
+            } else if model.permission.canUseLibrary {
                 TripListView()
             } else {
                 PermissionView(state: model.permission)
