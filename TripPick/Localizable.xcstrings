@@ -625,28 +625,6 @@
         }
       }
     },
-    "BestCut": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ベストカット"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "베스트컷"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "BestCut"
-          }
-        }
-      }
-    },
     "BestCut finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
       "localizations": {
         "ja": {
