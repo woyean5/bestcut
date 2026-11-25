@@ -549,6 +549,100 @@
    "ko": "이름",
    "ja": "名前",
    "zh-Hans": "名称"
+  },
+  "%lld places": {
+   "en": {
+    "one": "%lld place",
+    "other": "%lld places"
+   },
+   "ko": "%lld곳",
+   "ja": "%lldか所",
+   "zh-Hans": "%lld 个地点"
+  },
+  "Each city becomes its own cleanup inside one folder. The same folder is made in Photos.": {
+   "ko": "도시마다 따로 정리하고, 하나의 폴더로 묶어요. 사진 앱에도 같은 폴더가 만들어져요.",
+   "ja": "都市ごとに別々に整理し、1つのフォルダにまとめます。写真アプリにも同じフォルダが作成されます。",
+   "zh-Hans": "每个城市分别整理，并放进同一个文件夹。“照片”中也会创建相同的文件夹。"
+  },
+  "Folder name": {
+   "ko": "폴더 이름",
+   "ja": "フォルダ名",
+   "zh-Hans": "文件夹名称"
+  },
+  "Folders": {
+   "ko": "폴더",
+   "ja": "フォルダ",
+   "zh-Hans": "文件夹"
+  },
+  "Organize as one": {
+   "ko": "하나로 정리",
+   "ja": "1つにまとめて整理",
+   "zh-Hans": "合并整理"
+  },
+  "Split by city": {
+   "ko": "도시별로 나눠서 정리",
+   "ja": "都市ごとに分けて整理",
+   "zh-Hans": "按城市分开整理"
+  },
+  "Split by city?": {
+   "ko": "도시별로 나눌까요?",
+   "ja": "都市ごとに分けますか？",
+   "zh-Hans": "要按城市分开吗？"
+  },
+  "Blurry and dark shots, marked": {
+   "ko": "흔들리거나 어두운 사진 표시",
+   "ja": "ブレた写真・暗い写真に印",
+   "zh-Hans": "标出模糊和过暗的照片"
+  },
+  "Continue": {
+   "ko": "계속",
+   "ja": "続ける",
+   "zh-Hans": "继续"
+  },
+  "Everything is analyzed on this iPhone and never leaves it.": {
+   "ko": "모든 분석은 이 iPhone 안에서 이루어지고, 사진은 밖으로 나가지 않아요.",
+   "ja": "分析はすべてこのiPhoneの中で行われ、写真が外に送信されることはありません。",
+   "zh-Hans": "所有分析都在这台 iPhone 上完成，照片不会离开设备。"
+  },
+  "How BestCut works": {
+   "ko": "BestCut 사용법",
+   "ja": "BestCutの使い方",
+   "zh-Hans": "BestCut 使用方法"
+  },
+  "Photos taken in a row at one spot become one group.": {
+   "ko": "같은 곳에서 연달아 찍은 사진을 한 묶음으로 모아요.",
+   "ja": "同じ場所で続けて撮った写真を1つのグループにまとめます。",
+   "zh-Hans": "在同一地点连续拍摄的照片会归为一组。"
+  },
+  "Pick with a swipe": {
+   "ko": "스와이프로 빠르게 고르기",
+   "ja": "スワイプですばやく選ぶ",
+   "zh-Hans": "滑动快速挑选"
+  },
+  "Right to keep, left to delete later. Nothing is deleted until you confirm.": {
+   "ko": "오른쪽은 남기기, 왼쪽은 지울 후보. 직접 확인하기 전에는 아무것도 지워지지 않아요.",
+   "ja": "右で残す、左で削除候補。確認するまで何も削除されません。",
+   "zh-Hans": "向右保留，向左设为待删除。你确认之前不会删除任何照片。"
+  },
+  "Shaky, dark, too bright and eyes-closed photos are flagged.": {
+   "ko": "흔들리거나, 어둡거나, 너무 밝거나, 눈 감은 사진을 표시해요.",
+   "ja": "ブレ、暗すぎ、明るすぎ、目つぶりの写真に印を付けます。",
+   "zh-Hans": "手抖、过暗、过亮和闭眼的照片都会被标出。"
+  },
+  "Similar shots, grouped": {
+   "ko": "비슷한 사진은 한 묶음으로",
+   "ja": "似た写真は1つのグループに",
+   "zh-Hans": "相似照片归为一组"
+  },
+  "Welcome to": {
+   "ko": "어서 오세요",
+   "ja": "ようこそ",
+   "zh-Hans": "欢迎使用"
+  },
+  "Your photos stay on iPhone": {
+   "ko": "사진은 iPhone 밖으로 나가지 않아요",
+   "ja": "写真はiPhoneの外に出ません",
+   "zh-Hans": "照片只留在 iPhone 上"
   }
  }
 }

@@ -67,11 +67,21 @@ public final class PhotoKitLibrary: PhotoLibrary {
         }
     }
 
-    public func addToAlbum(named name: String, add: [String], remove: [String]) async throws {
-        let albums = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
+    public func addToAlbum(named name: String, add: [String], remove: [String], inFolder folderName: String?) async throws {
+        let folder = folderName.flatMap(Self.topLevelFolder(named:))
+        // Look for the album inside the folder when there is one, otherwise among top-level albums.
+        // With a folder, only an album inside that folder counts; a same-named album elsewhere belongs to another cleanup.
         var existing: PHAssetCollection?
-        albums.enumerateObjects { c, _, stop in
-            if c.localizedTitle == name { existing = c; stop.pointee = true }
+        if folderName != nil {
+            if let folder {
+                PHCollection.fetchCollections(in: folder, options: nil).enumerateObjects { c, _, stop in
+                    if let album = c as? PHAssetCollection, album.localizedTitle == name { existing = album; stop.pointee = true }
+                }
+            }
+        } else {
+            PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil).enumerateObjects { c, _, stop in
+                if c.localizedTitle == name { existing = c; stop.pointee = true }
+            }
         }
         let toAdd = PHAsset.fetchAssets(withLocalIdentifiers: add, options: nil)
         let toRemove = PHAsset.fetchAssets(withLocalIdentifiers: remove, options: nil)
@@ -79,10 +89,26 @@ public final class PhotoKitLibrary: PhotoLibrary {
             if let existing, let req = PHAssetCollectionChangeRequest(for: existing) {
                 if toAdd.count > 0 { req.addAssets(toAdd) }
                 if toRemove.count > 0 { req.removeAssets(toRemove) }
-            } else if toAdd.count > 0 {
-                PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: name).addAssets(toAdd)
+                return
+            }
+            guard toAdd.count > 0 else { return }
+            let created = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: name)
+            created.addAssets(toAdd)
+            guard let folderName, let placeholder = created.placeholderForCreatedAssetCollection as PHObjectPlaceholder? else { return }
+            if let folder, let folderReq = PHCollectionListChangeRequest(for: folder) {
+                folderReq.addChildCollections([placeholder] as NSArray)
+            } else {
+                PHCollectionListChangeRequest.creationRequestForCollectionList(withTitle: folderName).addChildCollections([placeholder] as NSArray)
             }
         }
+    }
+
+    private static func topLevelFolder(named name: String) -> PHCollectionList? {
+        var found: PHCollectionList?
+        PHCollectionList.fetchCollectionLists(with: .folder, subtype: .regularFolder, options: nil).enumerateObjects { list, _, stop in
+            if list.localizedTitle == name { found = list; stop.pointee = true }
+        }
+        return found
     }
 
     public func delete(_ ids: [String]) async throws -> DeleteOutcome {

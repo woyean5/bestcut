@@ -6,6 +6,7 @@ struct SettingsView: View {
     @AppStorage(AppSettingsKey.shortVideoSeconds) private var shortVideoSeconds = 2
     @AppStorage(AppSettingsKey.appearance) private var appearance = AppearanceMode.system.rawValue
     @AppStorage(AppLanguage.storageKey) private var language = AppLanguage.system.rawValue
+    @State private var showWelcome = false
 
     var body: some View {
         NavigationStack {
@@ -42,12 +43,14 @@ struct SettingsView: View {
                     .labelsHidden()
                 }
                 Section {
+                    Button("How BestCut works", systemImage: "questionmark.circle") { showWelcome = true }
                     LabeledContent("Version", value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "")
                 } footer: {
                     Text("Your photos are analyzed on this iPhone and never leave it.")
                 }
             }
             .onChange(of: language) { _, new in (AppLanguage(rawValue: new) ?? .system).applyToSystem() }
+            .sheet(isPresented: $showWelcome) { WelcomeView { showWelcome = false } }
             .navigationTitle(Text("Settings"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

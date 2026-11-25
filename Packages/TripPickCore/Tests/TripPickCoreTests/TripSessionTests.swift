@@ -147,3 +147,19 @@ private let defaults = SessionSettings(recommendationEnabled: true, shortVideoMa
     #expect(makeSession(items: items).summary.total == 0)
     #expect(makeSession(items: items, settings: .init(recommendationEnabled: true, shortVideoMaxSeconds: 5)).summary.total == 1)
 }
+
+@MainActor @Test func finalizePutsAlbumsInFolder() async throws {
+    let (s, lib) = makeSessionWithLibrary(items: [item("k"), item("sc", .screenshot, at: 9000)])
+    s.swipe("k", keep: true)
+    s.swipe("sc", keep: true)
+    _ = try await s.finalize(bestAlbum: "오사카 Best", screenshotAlbum: "오사카 Screenshots", deleteCandidates: false, folder: "일본 여행")
+    #expect(lib.albumFolders["오사카 Best"] == "일본 여행")
+    #expect(lib.albumFolders["오사카 Screenshots"] == "일본 여행")
+}
+@MainActor @Test func finalizeWithoutFolderLeavesAlbumsAtTop() async throws {
+    let (s, lib) = makeSessionWithLibrary(items: [item("k")])
+    s.swipe("k", keep: true)
+    _ = try await s.finalize(bestAlbum: "B", screenshotAlbum: "S", deleteCandidates: false)
+    #expect(lib.albumFolders["B"] == nil)
+    #expect(lib.albums["B"] == ["k"])
+}

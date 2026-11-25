@@ -4,6 +4,7 @@ import TripPickCore
 struct SummaryView: View {
     let session: TripSession
     let tripName: String
+    var folderName: String? = nil
 
     @State private var working = false
     @State private var outcome: Outcome?
@@ -108,7 +109,7 @@ struct SummaryView: View {
             do {
                 let result = try await session.finalize(bestAlbum: L10n.string("\(tripName) Best"),
                                                         screenshotAlbum: L10n.string("\(tripName) Screenshots"),
-                                                        deleteCandidates: delete)
+                                                        deleteCandidates: delete, folder: folderName)
                 outcome = result.deleteCancelled ? .deleteCancelled : (delete ? .deleted(result.deleted) : .albumOnly)
             } catch {
                 errorMessage = L10n.string("Couldn't update your photo library. Try again.")

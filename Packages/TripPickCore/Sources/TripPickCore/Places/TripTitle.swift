@@ -34,6 +34,23 @@ public enum PlaceClusterer {
 /// Turns coordinates into a city name, in the given language. Returns nil when it can't (offline, open sea).
 public protocol PlaceNaming: Sendable {
     func cityName(for coordinate: Coordinate, locale: Locale) async -> String?
+    /// City and country; by default only the city is known.
+    func place(for coordinate: Coordinate, locale: Locale) async -> PlaceName?
+}
+
+public struct PlaceName: Sendable, Equatable {
+    public var city: String
+    public var country: String?
+    public init(city: String, country: String?) {
+        self.city = city
+        self.country = country
+    }
+}
+
+public extension PlaceNaming {
+    func place(for coordinate: Coordinate, locale: Locale) async -> PlaceName? {
+        await cityName(for: coordinate, locale: locale).map { PlaceName(city: $0, country: nil) }
+    }
 }
 
 public enum TripTitle {
