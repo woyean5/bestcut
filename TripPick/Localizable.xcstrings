@@ -1,6 +1,54 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "%@ Best": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ベスト"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 베스트"
+          }
+        }
+      }
+    },
+    "%@ Screenshots": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ スクリーンショット"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 스크린샷"
+          }
+        }
+      }
+    },
+    "%@ can be freed": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 空けられます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 비울 수 있어요"
+          }
+        }
+      }
+    },
     "%lld / %lld": {
       "localizations": {
         "en": {
@@ -179,6 +227,28 @@
         }
       }
     },
+    "%lld → %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld → %2$lld"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld → %2$lld"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld → %2$lld"
+          }
+        }
+      }
+    },
     "%lld%% organized": {
       "localizations": {
         "ja": {
@@ -191,6 +261,72 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld%% 정리함"
+          }
+        }
+      }
+    },
+    "About %@ can be freed": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "約%@ 空けられます"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "약 %@ 비울 수 있어요"
+          }
+        }
+      }
+    },
+    "Albums are ready in Photos.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真アプリにアルバムを作成しました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진 앱에 앨범을 만들었어요."
+          }
+        }
+      }
+    },
+    "Albums are ready, and %lld items were deleted.": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Albums are ready, and %lld item was deleted."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Albums are ready, and %lld items were deleted."
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルバムを作成し、%lld件を削除しました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앨범을 만들고 %lld개를 지웠어요."
           }
         }
       }
@@ -271,6 +407,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "추천"
+          }
+        }
+      }
+    },
+    "Best album": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ベストアルバム"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "베스트 앨범"
           }
         }
       }
@@ -371,6 +523,22 @@
         }
       }
     },
+    "Couldn't update your photo library. Try again.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真ライブラリを更新できませんでした。もう一度お試しください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진 보관함을 바꾸지 못했어요. 다시 시도해 주세요."
+          }
+        }
+      }
+    },
     "Dark": {
       "localizations": {
         "ja": {
@@ -399,6 +567,54 @@
           "stringUnit": {
             "state": "translated",
             "value": "지울 후보"
+          }
+        }
+      }
+    },
+    "Deleted photos stay in Recently Deleted for 30 days, so you can still recover them.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除した写真は30日間「最近削除した項目」に残るので、復元できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지운 사진은 30일 동안 \"최근 삭제된 항목\"에 남아 있어서 되살릴 수 있어요."
+          }
+        }
+      }
+    },
+    "Deleting a photo also removes it from other albums and shared albums.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "写真を削除すると、ほかのアルバムや共有アルバムからも消えます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "사진을 지우면 다른 앨범과 공유 앨범에서도 사라져요."
+          }
+        }
+      }
+    },
+    "Deletion was canceled. Your albums are ready.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除をキャンセルしました。アルバムは作成済みです。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제를 취소했어요. 앨범은 만들어졌어요."
           }
         }
       }
@@ -613,6 +829,22 @@
         }
       }
     },
+    "Left as they are": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "そのまま"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "그대로 둠"
+          }
+        }
+      }
+    },
     "Light": {
       "localizations": {
         "ja": {
@@ -677,6 +909,38 @@
         }
       }
     },
+    "Make albums and delete %lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルバムを作成して%lld件を削除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앨범 만들고 %lld개 지우기"
+          }
+        }
+      }
+    },
+    "Make albums only": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルバムだけ作成"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앨범만 만들기"
+          }
+        }
+      }
+    },
     "Mark all for deletion": {
       "localizations": {
         "ja": {
@@ -689,6 +953,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "모두 지울 후보로"
+          }
+        }
+      }
+    },
+    "Marked for deletion": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除候補"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지울 후보"
           }
         }
       }
@@ -881,6 +1161,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "저장"
+          }
+        }
+      }
+    },
+    "Screenshot album": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スクリーンショットのアルバム"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "스크린샷 앨범"
           }
         }
       }
@@ -1297,6 +1593,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "내 여행"
+          }
+        }
+      }
+    },
+    "photos in your best album": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "枚がベストアルバムに入ります"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "장이 베스트 앨범에 들어가요"
           }
         }
       }

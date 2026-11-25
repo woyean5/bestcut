@@ -333,6 +333,83 @@
   "Undo": {
    "ko": "되돌리기",
    "ja": "取り消す"
+  },
+  "%@ Best": {
+   "ko": "%@ 베스트",
+   "ja": "%@ ベスト"
+  },
+  "%@ Screenshots": {
+   "ko": "%@ 스크린샷",
+   "ja": "%@ スクリーンショット"
+  },
+  "%@ can be freed": {
+   "ko": "%@ 비울 수 있어요",
+   "ja": "%@ 空けられます"
+  },
+  "%lld → %lld": {
+   "en": "%1$lld → %2$lld",
+   "ko": "%1$lld → %2$lld",
+   "ja": "%1$lld → %2$lld"
+  },
+  "About %@ can be freed": {
+   "ko": "약 %@ 비울 수 있어요",
+   "ja": "約%@ 空けられます"
+  },
+  "Albums are ready in Photos.": {
+   "ko": "사진 앱에 앨범을 만들었어요.",
+   "ja": "写真アプリにアルバムを作成しました。"
+  },
+  "Albums are ready, and %lld items were deleted.": {
+   "en": {
+    "one": "Albums are ready, and %lld item was deleted.",
+    "other": "Albums are ready, and %lld items were deleted."
+   },
+   "ko": "앨범을 만들고 %lld개를 지웠어요.",
+   "ja": "アルバムを作成し、%lld件を削除しました。"
+  },
+  "Best album": {
+   "ko": "베스트 앨범",
+   "ja": "ベストアルバム"
+  },
+  "Couldn't update your photo library. Try again.": {
+   "ko": "사진 보관함을 바꾸지 못했어요. 다시 시도해 주세요.",
+   "ja": "写真ライブラリを更新できませんでした。もう一度お試しください。"
+  },
+  "Deleted photos stay in Recently Deleted for 30 days, so you can still recover them.": {
+   "ko": "지운 사진은 30일 동안 \"최근 삭제된 항목\"에 남아 있어서 되살릴 수 있어요.",
+   "ja": "削除した写真は30日間「最近削除した項目」に残るので、復元できます。"
+  },
+  "Deleting a photo also removes it from other albums and shared albums.": {
+   "ko": "사진을 지우면 다른 앨범과 공유 앨범에서도 사라져요.",
+   "ja": "写真を削除すると、ほかのアルバムや共有アルバムからも消えます。"
+  },
+  "Deletion was canceled. Your albums are ready.": {
+   "ko": "삭제를 취소했어요. 앨범은 만들어졌어요.",
+   "ja": "削除をキャンセルしました。アルバムは作成済みです。"
+  },
+  "Left as they are": {
+   "ko": "그대로 둠",
+   "ja": "そのまま"
+  },
+  "Make albums and delete %lld": {
+   "ko": "앨범 만들고 %lld개 지우기",
+   "ja": "アルバムを作成して%lld件を削除"
+  },
+  "Make albums only": {
+   "ko": "앨범만 만들기",
+   "ja": "アルバムだけ作成"
+  },
+  "Marked for deletion": {
+   "ko": "지울 후보",
+   "ja": "削除候補"
+  },
+  "Screenshot album": {
+   "ko": "스크린샷 앨범",
+   "ja": "スクリーンショットのアルバム"
+  },
+  "photos in your best album": {
+   "ko": "장이 베스트 앨범에 들어가요",
+   "ja": "枚がベストアルバムに入ります"
   }
  }
 }
