@@ -237,14 +237,6 @@
    "ko": "남기기",
    "ja": "残す"
   },
-  "Keep %lld and continue": {
-   "en": {
-    "one": "Keep %lld and continue",
-    "other": "Keep %lld and continue"
-   },
-   "ko": "%lld장 남기고 다음",
-   "ja": "%lld枚を残して次へ"
-  },
   "Keep this": {
    "ko": "이걸 남기기",
    "ja": "これを残す"
@@ -260,10 +252,6 @@
   "Long-press two photos to compare them": {
    "ko": "사진 두 장을 길게 누르면 나란히 비교해요",
    "ja": "2枚の写真を長押しすると並べて比較できます"
-  },
-  "Mark all for deletion": {
-   "ko": "모두 지울 후보로",
-   "ja": "すべて削除候補にする"
   },
   "More": {
    "ko": "더 보기",
@@ -410,6 +398,24 @@
   "photos in your best album": {
    "ko": "장이 베스트 앨범에 들어가요",
    "ja": "枚がベストアルバムに入ります"
+  },
+  "%lld in this group · %lld kept": {
+   "en": "%1$lld in this group · %2$lld kept",
+   "ko": "이 묶음 %1$lld장 · %2$lld장 남김",
+   "ja": "このグループ%1$lld枚・%2$lld枚を残す"
+  },
+  "Keep %lld · mark %lld for deletion": {
+   "en": "Keep %1$lld · mark %2$lld for deletion",
+   "ko": "%1$lld장 남기고 %2$lld장은 지울 후보로",
+   "ja": "%1$lld枚を残し、%2$lld枚を削除候補に"
+  },
+  "Keep all %lld": {
+   "ko": "%lld장 모두 남기기",
+   "ja": "%lld枚すべて残す"
+  },
+  "Mark all %lld for deletion": {
+   "ko": "%lld장 모두 지울 후보로",
+   "ja": "%lld枚すべて削除候補に"
   }
  }
 }

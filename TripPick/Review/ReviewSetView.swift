@@ -53,16 +53,21 @@ struct ReviewSetView: View {
             .frame(maxHeight: .infinity)
             .padding(.horizontal)
 
-            ScrollView(.horizontal) {
-                LazyHStack(spacing: 8) {
+            Text("\(set.itemIDs.count) in this group · \(selection.count) kept")
+                .font(.subheadline.weight(.semibold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+
+            ScrollView {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 5), spacing: 6) {
                     ForEach(set.itemIDs, id: \.self) { id in
                         thumbnail(id, focused: id == focus, recommended: id == recommended)
                     }
                 }
                 .padding(.horizontal)
             }
-            .scrollIndicators(.hidden)
-            .frame(height: 96)
+            .scrollIndicators(.visible)
+            .frame(height: set.itemIDs.count > 10 ? 210 : (set.itemIDs.count > 5 ? 150 : 76))
 
             Text(compareFirst == nil ? "Long-press two photos to compare them" : "Long-press another photo to compare")
                 .font(.footnote)
@@ -73,7 +78,10 @@ struct ReviewSetView: View {
                 load(nextSet(after: set))
             } label: {
                 Group {
-                    if selection.isEmpty { Text("Mark all for deletion") } else { Text("Keep \(selection.count) and continue") }
+                    let rest = set.itemIDs.count - selection.count
+                    if selection.isEmpty { Text("Mark all \(rest) for deletion") }
+                    else if rest == 0 { Text("Keep all \(selection.count)") }
+                    else { Text("Keep \(selection.count) · mark \(rest) for deletion") }
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -88,8 +96,13 @@ struct ReviewSetView: View {
     }
 
     private func thumbnail(_ id: String, focused: Bool, recommended: Bool) -> some View {
-        AssetImageView(id: id, maxPixel: 300, isVideo: session.items[id]?.kind == .video)
-            .frame(width: 84, height: 84)
+        Color.clear
+            .aspectRatio(1, contentMode: .fit)
+            .overlay { AssetImageView(id: id, maxPixel: 300, isVideo: false) }
+            .clipped()
+            .overlay(alignment: .bottomLeading) {
+                if session.items[id]?.kind == .video { Image(systemName: "video.fill").font(.caption2).foregroundStyle(.white).padding(4) }
+            }
             .clipShape(.rect(cornerRadius: 12))
             .overlay {
                 RoundedRectangle(cornerRadius: 12)

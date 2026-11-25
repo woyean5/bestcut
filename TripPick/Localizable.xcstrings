@@ -105,6 +105,28 @@
         }
       }
     },
+    "%lld in this group · %lld kept": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld in this group · %2$lld kept"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このグループ%1$lld枚・%2$lld枚を残す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 묶음 %1$lld장 · %2$lld장 남김"
+          }
+        }
+      }
+    },
     "%lld of %lld": {
       "localizations": {
         "ja": {
@@ -763,36 +785,40 @@
         }
       }
     },
-    "Keep %lld and continue": {
+    "Keep %lld · mark %lld for deletion": {
       "localizations": {
         "en": {
-          "variations": {
-            "plural": {
-              "one": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "Keep %lld and continue"
-                }
-              },
-              "other": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "Keep %lld and continue"
-                }
-              }
-            }
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep %1$lld · mark %2$lld for deletion"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld枚を残して次へ"
+            "value": "%1$lld枚を残し、%2$lld枚を削除候補に"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld장 남기고 다음"
+            "value": "%1$lld장 남기고 %2$lld장은 지울 후보로"
+          }
+        }
+      }
+    },
+    "Keep all %lld": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld枚すべて残す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld장 모두 남기기"
           }
         }
       }
@@ -941,18 +967,18 @@
         }
       }
     },
-    "Mark all for deletion": {
+    "Mark all %lld for deletion": {
       "localizations": {
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "すべて削除候補にする"
+            "value": "%lld枚すべて削除候補に"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "모두 지울 후보로"
+            "value": "%lld장 모두 지울 후보로"
           }
         }
       }
