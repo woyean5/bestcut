@@ -28,7 +28,7 @@ struct CompareView: View {
                         .onChanged { offset = CGSize(width: baseOffset.width + $0.translation.width, height: baseOffset.height + $0.translation.height) }
                         .onEnded { _ in baseOffset = offset })
             )
-            .navigationTitle("Compare")
+            .navigationTitle(Text("Compare"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {

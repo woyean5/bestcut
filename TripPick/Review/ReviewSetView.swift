@@ -91,7 +91,7 @@ struct ReviewSetView: View {
             .padding(.horizontal)
             .padding(.bottom, 8)
         }
-        .navigationTitle(title(set))
+        .navigationTitle(Text(title(set)))
         .navigationBarTitleDisplayMode(.inline)
     }
 

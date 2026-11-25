@@ -41,6 +41,7 @@ struct RootView: View {
     @Environment(AppModel.self) private var model
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(AppSettingsKey.appearance) private var appearance = AppearanceMode.system.rawValue
+    @AppStorage(AppLanguage.storageKey) private var language = AppLanguage.system.rawValue
 
     var body: some View {
         Group {
@@ -51,6 +52,7 @@ struct RootView: View {
             }
         }
         .preferredColorScheme(AppearanceMode(rawValue: appearance)?.colorScheme)
+        .environment(\.locale, (AppLanguage(rawValue: language) ?? .system).locale)
         .onChange(of: scenePhase) { _, phase in
             if phase == .active { model.refreshPermission() }
         }

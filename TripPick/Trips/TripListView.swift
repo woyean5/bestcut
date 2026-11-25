@@ -55,7 +55,7 @@ struct TripListView: View {
                     .controlSize(.large)
                     .padding(.bottom, 8)
             }
-            .navigationTitle("TripPick")
+            .navigationTitle(Text("TripPick"))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Settings", systemImage: "gearshape") { showSettings = true }

@@ -15,7 +15,7 @@ struct AssetImageView: View {
 
     var body: some View {
         ZStack {
-            Rectangle().fill(.quaternary)
+            if image == nil && player == nil { Rectangle().fill(.quaternary) }
             if let player {
                 VideoPlayer(player: player)
             } else if let image {

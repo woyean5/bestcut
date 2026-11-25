@@ -416,6 +416,14 @@
   "Mark all %lld for deletion": {
    "ko": "%lld장 모두 지울 후보로",
    "ja": "%lld枚すべて削除候補に"
+  },
+  "Album names follow this language too.": {
+   "ko": "앨범 이름도 이 언어로 만들어져요.",
+   "ja": "アルバム名もこの言語で作成されます。"
+  },
+  "Language": {
+   "ko": "언어",
+   "ja": "言語"
   }
  }
 }

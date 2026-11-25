@@ -15,13 +15,13 @@ struct SwipeReviewView: View {
         GeometryReader { geo in
             VStack(spacing: 16) {
                 if index < queue.count {
+                    let size = cardSize(in: geo.size)
                     ZStack {
+                        // The next photo waits behind at the same size, so nothing zooms when it comes forward.
                         if index + 1 < queue.count {
-                            card(queue[index + 1])
-                                .scaleEffect(0.94)
-                                .offset(y: 14)
+                            card(queue[index + 1], size: size)
                         }
-                        card(queue[index])
+                        card(queue[index], size: size)
                             .offset(x: drag.width, y: drag.height * 0.2)
                             .rotationEffect(.degrees(Double(drag.width / 22)))
                             .overlay { decisionHint(width: geo.size.width) }
@@ -63,10 +63,24 @@ struct SwipeReviewView: View {
         }
     }
 
-    private func card(_ id: String) -> some View {
-        AssetImageView(id: id, maxPixel: 1400, contentMode: .fill, isVideo: session.items[id]?.kind == .video)
-            .aspectRatio(3 / 4, contentMode: .fit)
-            .clipShape(.rect(cornerRadius: 28))
+    /// One fixed card size for every photo, whatever its shape.
+    private func cardSize(in space: CGSize) -> CGSize {
+        let width = max(0, space.width - 40)
+        let height = min(width * 4 / 3, max(0, space.height - 150))
+        return CGSize(width: width, height: height)
+    }
+
+    /// The whole photo, never cropped: a blurred copy fills the card behind it.
+    private func card(_ id: String, size: CGSize) -> some View {
+        ZStack {
+            AssetImageView(id: id, maxPixel: 120, contentMode: .fill)
+                .blur(radius: 24)
+                .opacity(0.6)
+            AssetImageView(id: id, maxPixel: 1400, contentMode: .fit, isVideo: session.items[id]?.kind == .video)
+        }
+        .frame(width: size.width, height: size.height)
+        .background(.black)
+        .clipShape(.rect(cornerRadius: 28))
             .overlay(alignment: .topLeading) {
                 BadgeRow(flags: session.analyses[id]?.flags ?? [], isFavorite: session.items[id]?.isFavorite ?? false)
                     .padding(14)

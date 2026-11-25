@@ -303,6 +303,22 @@
         }
       }
     },
+    "Album names follow this language too.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルバム名もこの言語で作成されます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앨범 이름도 이 언어로 만들어져요."
+          }
+        }
+      }
+    },
     "Albums are ready in Photos.": {
       "localizations": {
         "ja": {
@@ -851,6 +867,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "남기는 중"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "言語"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "언어"
           }
         }
       }

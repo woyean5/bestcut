@@ -54,7 +54,7 @@ struct NewTripView: View {
                     }
                 }
             }
-            .navigationTitle("New trip")
+            .navigationTitle(Text("New trip"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

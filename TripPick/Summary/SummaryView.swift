@@ -53,7 +53,7 @@ struct SummaryView: View {
                 }
             }
         }
-        .navigationTitle("Results")
+        .navigationTitle(Text("Results"))
         .navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom) {
             GlassEffectContainer {
@@ -89,14 +89,14 @@ struct SummaryView: View {
 
     private func freeable(_ s: TripSummary) -> String {
         let size = ByteCountFormatter.string(fromByteCount: s.freeableBytes, countStyle: .file)
-        return s.bytesIsEstimate ? String(localized: "About \(size) can be freed") : String(localized: "\(size) can be freed")
+        return s.bytesIsEstimate ? L10n.string("About \(size) can be freed") : L10n.string("\(size) can be freed")
     }
 
     private func message(_ outcome: Outcome) -> String {
         switch outcome {
-        case .albumOnly: String(localized: "Albums are ready in Photos.")
-        case .deleted(let n): String(localized: "Albums are ready, and \(n) items were deleted.")
-        case .deleteCancelled: String(localized: "Deletion was canceled. Your albums are ready.")
+        case .albumOnly: L10n.string("Albums are ready in Photos.")
+        case .deleted(let n): L10n.string("Albums are ready, and \(n) items were deleted.")
+        case .deleteCancelled: L10n.string("Deletion was canceled. Your albums are ready.")
         }
     }
 
@@ -106,12 +106,12 @@ struct SummaryView: View {
         Task {
             defer { working = false }
             do {
-                let result = try await session.finalize(bestAlbum: String(localized: "\(tripName) Best"),
-                                                        screenshotAlbum: String(localized: "\(tripName) Screenshots"),
+                let result = try await session.finalize(bestAlbum: L10n.string("\(tripName) Best"),
+                                                        screenshotAlbum: L10n.string("\(tripName) Screenshots"),
                                                         deleteCandidates: delete)
                 outcome = result.deleteCancelled ? .deleteCancelled : (delete ? .deleted(result.deleted) : .albumOnly)
             } catch {
-                errorMessage = String(localized: "Couldn't update your photo library. Try again.")
+                errorMessage = L10n.string("Couldn't update your photo library. Try again.")
             }
         }
     }
