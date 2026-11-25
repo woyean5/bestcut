@@ -87,6 +87,20 @@ import Observation
         return last.id
     }
 
+    /// A direct change from the final review. Not part of swipe undo.
+    public func setDecision(_ decision: Decision, for id: String) {
+        write(decision, [id])
+    }
+
+    /// This trip's items with a decision, in shooting order. For `.keep`, pass `screenshots` to split the two albums.
+    public func items(with decision: Decision, screenshots: Bool? = nil) -> [String] {
+        buckets.allItemIDs.filter { id in
+            guard self.decision(id) == decision else { return false }
+            guard let screenshots else { return true }
+            return (items[id]?.kind == .screenshot) == screenshots
+        }
+    }
+
     private func write(_ decision: Decision, _ ids: [String]) {
         guard !ids.isEmpty else { return }
         store.set(decision, for: ids)

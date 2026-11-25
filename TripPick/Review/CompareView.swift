@@ -1,7 +1,7 @@
 import SwiftUI
 import TripPickCore
 
-/// Two photos one above the other; zooming or panning one moves both.
+/// Two photos one above the other. Pinching zooms both around their centres; photos never move. Double-tap toggles zoom.
 struct CompareView: View {
     @Environment(\.dismiss) private var dismiss
     let session: TripSession
@@ -10,8 +10,6 @@ struct CompareView: View {
 
     @State private var scale: CGFloat = 1
     @State private var baseScale: CGFloat = 1
-    @State private var offset: CGSize = .zero
-    @State private var baseOffset: CGSize = .zero
 
     var body: some View {
         NavigationStack {
@@ -22,12 +20,14 @@ struct CompareView: View {
             .padding(.horizontal)
             .gesture(
                 MagnifyGesture()
-                    .onChanged { scale = min(6, max(1, baseScale * $0.magnification)) }
-                    .onEnded { _ in baseScale = scale; if scale == 1 { offset = .zero; baseOffset = .zero } }
-                    .simultaneously(with: DragGesture()
-                        .onChanged { offset = CGSize(width: baseOffset.width + $0.translation.width, height: baseOffset.height + $0.translation.height) }
-                        .onEnded { _ in baseOffset = offset })
+                    .onChanged { scale = min(5, max(1, baseScale * $0.magnification)) }
+                    .onEnded { _ in baseScale = scale }
             )
+            .onTapGesture(count: 2) {
+                withAnimation(.snappy) { scale = scale > 1 ? 1 : 2.5 }
+                baseScale = scale
+            }
+            .interactiveDismissDisabled()
             .navigationTitle(Text("Compare"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -42,7 +42,6 @@ struct CompareView: View {
         let kept = selection.contains(id)
         return AssetImageView(id: id, maxPixel: 2000, contentMode: .fit)
             .scaleEffect(scale)
-            .offset(offset)
             .clipShape(.rect(cornerRadius: 16))
             .contentShape(.rect)
             .overlay(alignment: .bottomTrailing) {
