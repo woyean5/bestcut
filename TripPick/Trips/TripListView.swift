@@ -7,7 +7,7 @@ import TripPickCore
 struct TripListView: View {
     @Environment(AppModel.self) private var model
     @Query(sort: \TripRecord.createdAt, order: .reverse) private var trips: [TripRecord]
-    @State private var path: [UUID] = []
+    @State private var path = NavigationPath()
     @State private var showNewTrip = false
     @State private var showSettings = false
 
@@ -30,7 +30,9 @@ struct TripListView: View {
                             NavigationLink(value: trip.id) {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(trip.name).font(.headline)
-                                    Text(TripName.dates(trip.range)).font(.subheadline).foregroundStyle(.secondary)
+                                    if trip.name != TripName.dates(trip.range) {
+                                        Text(TripName.dates(trip.range)).font(.subheadline).foregroundStyle(.secondary)
+                                    }
                                 }
                             }
                         }

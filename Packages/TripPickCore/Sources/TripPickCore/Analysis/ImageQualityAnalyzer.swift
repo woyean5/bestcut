@@ -36,9 +36,10 @@ public struct ImageQualityAnalyzer: ImageAnalyzing {
         var width: Int, height: Int, data: [UInt8]
     }
 
-    static func grayscalePixels(_ image: CGImage, maxPixel: Int = 512) -> GrayPixels {
+    static func grayscalePixels(_ image: CGImage, maxPixel: Int = 512, square: Bool = false) -> GrayPixels {
         let scale = min(1, Double(maxPixel) / Double(max(image.width, image.height)))
-        let w = max(1, Int(Double(image.width) * scale)), h = max(1, Int(Double(image.height) * scale))
+        let w = square ? maxPixel : max(1, Int(Double(image.width) * scale))
+        let h = square ? maxPixel : max(1, Int(Double(image.height) * scale))
         var data = [UInt8](repeating: 0, count: w * h)
         data.withUnsafeMutableBytes { buf in
             let ctx = CGContext(data: buf.baseAddress, width: w, height: h, bitsPerComponent: 8, bytesPerRow: w,
@@ -93,9 +94,11 @@ public struct ImageQualityAnalyzer: ImageAnalyzing {
 
     // MARK: Vision
 
-    static func featurePrint(_ image: CGImage) async -> Data? {
-        guard let obs = try? await GenerateImageFeaturePrintRequest().perform(on: image) else { return nil }
-        return FeaturePrint.encode(obs)
+    static func featurePrint(_ image: CGImage) async -> Data {
+        if let obs = try? await GenerateImageFeaturePrintRequest().perform(on: image), let data = FeaturePrint.encode(obs) {
+            return data
+        }
+        return FeaturePrint.thumbnailPrint(image)
     }
 
     static func aesthetics(_ image: CGImage) async -> Double {

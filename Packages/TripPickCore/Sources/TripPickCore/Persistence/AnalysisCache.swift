@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @MainActor public final class AnalysisCache {
-    public static let analyzerVersion = 1
+    public static let analyzerVersion = 2
     private let context: ModelContext
 
     public init(context: ModelContext) {

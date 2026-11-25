@@ -41,3 +41,16 @@ import Testing
     let b = await ImageQualityAnalyzer().analyze(TestImages.solid(gray: 0.5), id: "b", kind: .photo)
     #expect(FeaturePrint.distance(a.featurePrint!, b.featurePrint!)! > 0.1)
 }
+
+@Test func thumbnailPrintSeparatesSimilarFromDifferent() {
+    let a = FeaturePrint.thumbnailPrint(TestImages.solid(gray: 0.5))
+    let b = FeaturePrint.thumbnailPrint(TestImages.solid(gray: 0.53))
+    let c = FeaturePrint.thumbnailPrint(TestImages.checkerboard(cell: 64))
+    #expect(FeaturePrint.distance(a, a)! < 0.001)
+    #expect(FeaturePrint.distance(a, b)! < GroupingThresholds.default.photoMaxFeatureDistance)
+    #expect(FeaturePrint.distance(a, c)! > GroupingThresholds.default.photoMaxFeatureDistance)
+}
+@Test func mixedPrintKindsHaveNoDistance() async {
+    let vision = await ImageQualityAnalyzer().analyze(TestImages.checkerboard(cell: 8), id: "a", kind: .photo).featurePrint!
+    #expect(FeaturePrint.distance(vision, FeaturePrint.thumbnailPrint(TestImages.solid(gray: 0.5))) == nil)
+}

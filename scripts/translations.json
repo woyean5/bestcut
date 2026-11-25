@@ -5,46 +5,305 @@
    "ko": "흔들린 사진과 비슷한 사진을 찾기 위해 이 iPhone의 사진을 살펴봅니다. 사진은 기기 밖으로 나가지 않습니다.",
    "ja": "ブレた写真や似た写真を見つけるために、このiPhoneの写真を確認します。写真が端末の外に送信されることはありません。"
   },
-  "CFBundleDisplayName": {"en": "TripPick", "ko": "TripPick", "ja": "TripPick"}
+  "CFBundleDisplayName": {
+   "en": "TripPick",
+   "ko": "TripPick",
+   "ja": "TripPick"
+  }
  },
  "strings": {
-  "%lld of %lld": {"ko": "%1$lld / %2$lld", "ja": "%1$lld / %2$lld"},
-  "%lld photos · %lld short videos": {"en": "%1$lld photos · %2$lld short videos", "ko": "사진 %1$lld장 · 짧은 동영상 %2$lld개", "ja": "写真%1$lld枚・短い動画%2$lld本"},
-  "%lld sec or less": {"ko": "%lld초 이하", "ja": "%lld秒以下"},
-  "Allow photo access": {"ko": "사진 접근 허용", "ja": "写真へのアクセスを許可"},
-  "Appearance": {"ko": "화면 모드", "ja": "外観モード"},
-  "Cancel": {"ko": "취소", "ja": "キャンセル"},
-  "Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.": {"ko": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.", "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。"},
-  "Dark": {"ko": "다크", "ja": "ダーク"},
-  "Done": {"ko": "완료", "ja": "完了"},
-  "End": {"ko": "끝", "ja": "終了"},
-  "Everything happens on this iPhone.": {"ko": "모든 분석은 이 iPhone 안에서 이루어집니다.", "ja": "すべての処理はこのiPhoneの中で行われます。"},
-  "In each group, the sharpest and best-looking photo starts out selected.": {"ko": "묶음마다 가장 선명하고 잘 나온 사진이 미리 선택됩니다.", "ja": "各グループで、いちばん鮮明でよく撮れた写真が最初から選択されます。"},
-  "Light": {"ko": "라이트", "ja": "ライト"},
-  "Looking through your photos": {"ko": "사진을 살펴보는 중", "ja": "写真を確認しています"},
-  "New trip": {"ko": "새 여행", "ja": "新しい旅行"},
-  "Open Settings": {"ko": "설정 열기", "ja": "設定を開く"},
-  "Organize a new trip": {"ko": "새 여행 정리", "ja": "新しい旅行を整理"},
-  "Organize your first trip": {"ko": "첫 여행을 정리해 보세요", "ja": "最初の旅行を整理しましょう"},
-  "Photo access is off": {"ko": "사진 접근이 꺼져 있어요", "ja": "写真へのアクセスがオフです"},
-  "Pick your best travel shots": {"ko": "여행 베스트 컷만 골라 보세요", "ja": "旅行のベストショットだけを選びましょう"},
-  "Select more photos": {"ko": "사진 더 선택", "ja": "写真をさらに選択"},
-  "Settings": {"ko": "설정", "ja": "設定"},
-  "Short videos": {"ko": "짧은 동영상", "ja": "短い動画"},
-  "Start": {"ko": "시작", "ja": "開始"},
-  "Start organizing": {"ko": "정리 시작", "ja": "整理を始める"},
-  "Suggest the best shot": {"ko": "추천 사진 자동 선택", "ja": "おすすめ写真を自動で選択"},
-  "System": {"ko": "시스템", "ja": "システム"},
-  "The end date is before the start date.": {"ko": "끝 날짜가 시작 날짜보다 앞서 있어요.", "ja": "終了日が開始日より前になっています。"},
-  "There are no photos on these dates.": {"ko": "이 기간에는 사진이 없어요.", "ja": "この期間には写真がありません。"},
-  "TripPick": {"ko": "TripPick", "ja": "TripPick"},
-  "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {"ko": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.", "ja": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"},
-  "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {"ko": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요.", "ja": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。"},
-  "Version": {"ko": "버전", "ja": "バージョン"},
-  "Videos this short are often taken by accident. Longer videos aren't shown.": {"ko": "이렇게 짧은 동영상은 실수로 찍힌 경우가 많아요. 더 긴 동영상은 보이지 않아요.", "ja": "このくらい短い動画は誤って撮影されたことが多いです。これより長い動画は表示されません。"},
-  "Which trip should we organize?": {"ko": "어느 여행을 정리할까요?", "ja": "どの旅行を整理しますか？"},
-  "You've shared only some photos": {"ko": "일부 사진만 공유되어 있어요", "ja": "一部の写真だけが共有されています"},
-  "Your photos are analyzed on this iPhone and never leave it.": {"ko": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.", "ja": "写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"},
-  "Your trips": {"ko": "내 여행", "ja": "旅行一覧"}
+  "%lld of %lld": {
+   "ko": "%1$lld / %2$lld",
+   "ja": "%1$lld / %2$lld"
+  },
+  "%lld photos · %lld short videos": {
+   "en": "%1$lld photos · %2$lld short videos",
+   "ko": "사진 %1$lld장 · 짧은 동영상 %2$lld개",
+   "ja": "写真%1$lld枚・短い動画%2$lld本"
+  },
+  "%lld sec or less": {
+   "ko": "%lld초 이하",
+   "ja": "%lld秒以下"
+  },
+  "Allow photo access": {
+   "ko": "사진 접근 허용",
+   "ja": "写真へのアクセスを許可"
+  },
+  "Appearance": {
+   "ko": "화면 모드",
+   "ja": "外観モード"
+  },
+  "Cancel": {
+   "ko": "취소",
+   "ja": "キャンセル"
+  },
+  "Choose the dates of a trip. TripPick groups similar shots and flags blurry ones so you only have to pick.": {
+   "ko": "여행 날짜를 고르세요. 비슷한 사진은 묶고 흔들린 사진은 표시해 두니, 고르기만 하면 됩니다.",
+   "ja": "旅行の日付を選んでください。似た写真をまとめ、ブレた写真に印を付けるので、選ぶだけで済みます。"
+  },
+  "Dark": {
+   "ko": "다크",
+   "ja": "ダーク"
+  },
+  "Done": {
+   "ko": "완료",
+   "ja": "完了"
+  },
+  "End": {
+   "ko": "끝",
+   "ja": "終了"
+  },
+  "Everything happens on this iPhone.": {
+   "ko": "모든 분석은 이 iPhone 안에서 이루어집니다.",
+   "ja": "すべての処理はこのiPhoneの中で行われます。"
+  },
+  "In each group, the sharpest and best-looking photo starts out selected.": {
+   "ko": "묶음마다 가장 선명하고 잘 나온 사진이 미리 선택됩니다.",
+   "ja": "各グループで、いちばん鮮明でよく撮れた写真が最初から選択されます。"
+  },
+  "Light": {
+   "ko": "라이트",
+   "ja": "ライト"
+  },
+  "Looking through your photos": {
+   "ko": "사진을 살펴보는 중",
+   "ja": "写真を確認しています"
+  },
+  "New trip": {
+   "ko": "새 여행",
+   "ja": "新しい旅行"
+  },
+  "Open Settings": {
+   "ko": "설정 열기",
+   "ja": "設定を開く"
+  },
+  "Organize a new trip": {
+   "ko": "새 여행 정리",
+   "ja": "新しい旅行を整理"
+  },
+  "Organize your first trip": {
+   "ko": "첫 여행을 정리해 보세요",
+   "ja": "最初の旅行を整理しましょう"
+  },
+  "Photo access is off": {
+   "ko": "사진 접근이 꺼져 있어요",
+   "ja": "写真へのアクセスがオフです"
+  },
+  "Pick your best travel shots": {
+   "ko": "여행 베스트 컷만 골라 보세요",
+   "ja": "旅行のベストショットだけを選びましょう"
+  },
+  "Select more photos": {
+   "ko": "사진 더 선택",
+   "ja": "写真をさらに選択"
+  },
+  "Settings": {
+   "ko": "설정",
+   "ja": "設定"
+  },
+  "Short videos": {
+   "ko": "짧은 동영상",
+   "ja": "短い動画"
+  },
+  "Start": {
+   "ko": "시작",
+   "ja": "開始"
+  },
+  "Start organizing": {
+   "ko": "정리 시작",
+   "ja": "整理を始める"
+  },
+  "Suggest the best shot": {
+   "ko": "추천 사진 자동 선택",
+   "ja": "おすすめ写真を自動で選択"
+  },
+  "System": {
+   "ko": "시스템",
+   "ja": "システム"
+  },
+  "The end date is before the start date.": {
+   "ko": "끝 날짜가 시작 날짜보다 앞서 있어요.",
+   "ja": "終了日が開始日より前になっています。"
+  },
+  "There are no photos on these dates.": {
+   "ko": "이 기간에는 사진이 없어요.",
+   "ja": "この期間には写真がありません。"
+  },
+  "TripPick": {
+   "ko": "TripPick",
+   "ja": "TripPick"
+  },
+  "TripPick finds blurry shots and groups similar photos so you only have to pick. Your photos are analyzed on this iPhone and never leave it.": {
+   "ko": "흔들린 사진을 찾아 표시하고 비슷한 사진을 묶어 드려요. 고르기만 하면 됩니다. 사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
+   "ja": "ブレた写真を見つけ、似た写真をまとめるので、選ぶだけで済みます。写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
+  },
+  "TripPick needs access to your photos to find blurry shots and group similar ones. You can turn it on in Settings.": {
+   "ko": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요.",
+   "ja": "ブレた写真を見つけて似た写真をまとめるには、写真へのアクセスが必要です。設定でオンにできます。"
+  },
+  "Version": {
+   "ko": "버전",
+   "ja": "バージョン"
+  },
+  "Videos this short are often taken by accident. Longer videos aren't shown.": {
+   "ko": "이렇게 짧은 동영상은 실수로 찍힌 경우가 많아요. 더 긴 동영상은 보이지 않아요.",
+   "ja": "このくらい短い動画は誤って撮影されたことが多いです。これより長い動画は表示されません。"
+  },
+  "Which trip should we organize?": {
+   "ko": "어느 여행을 정리할까요?",
+   "ja": "どの旅行を整理しますか？"
+  },
+  "You've shared only some photos": {
+   "ko": "일부 사진만 공유되어 있어요",
+   "ja": "一部の写真だけが共有されています"
+  },
+  "Your photos are analyzed on this iPhone and never leave it.": {
+   "ko": "사진은 이 iPhone 안에서만 분석되고 밖으로 나가지 않아요.",
+   "ja": "写真はこのiPhoneの中だけで分析され、外に送信されることはありません。"
+  },
+  "Your trips": {
+   "ko": "내 여행",
+   "ja": "旅行一覧"
+  },
+  "%lld groups": {
+   "en": {
+    "one": "%lld group",
+    "other": "%lld groups"
+   },
+   "ko": "%lld묶음",
+   "ja": "%lldグループ"
+  },
+  "%lld photos": {
+   "en": {
+    "one": "%lld photo",
+    "other": "%lld photos"
+   },
+   "ko": "%lld장",
+   "ja": "%lld枚"
+  },
+  "%lld videos": {
+   "en": {
+    "one": "%lld video",
+    "other": "%lld videos"
+   },
+   "ko": "%lld개",
+   "ja": "%lld本"
+  },
+  "%lld%% organized": {
+   "ko": "%lld%% 정리함",
+   "ja": "%lld%% 整理済み"
+  },
+  "All done here": {
+   "ko": "여기는 다 정리했어요",
+   "ja": "ここは整理済みです"
+  },
+  "Best": {
+   "ko": "추천",
+   "ja": "おすすめ"
+  },
+  "Blurry": {
+   "ko": "흔들림",
+   "ja": "ブレ"
+  },
+  "Blurry or dark": {
+   "ko": "흔들림·어두움",
+   "ja": "ブレ・暗い写真"
+  },
+  "Compare": {
+   "ko": "비교",
+   "ja": "比較"
+  },
+  "Continue organizing": {
+   "ko": "이어서 정리하기",
+   "ja": "続きから整理"
+  },
+  "Don't keep": {
+   "ko": "남기지 않음",
+   "ja": "残さない"
+  },
+  "Every group in this list is decided.": {
+   "ko": "이 목록의 묶음을 모두 정했어요.",
+   "ja": "このリストのグループはすべて決定済みです。"
+  },
+  "Eyes closed": {
+   "ko": "눈 감음",
+   "ja": "目つぶり"
+  },
+  "Favorite": {
+   "ko": "즐겨찾기",
+   "ja": "お気に入り"
+  },
+  "Keep": {
+   "ko": "남기기",
+   "ja": "残す"
+  },
+  "Keep %lld and continue": {
+   "en": {
+    "one": "Keep %lld and continue",
+    "other": "Keep %lld and continue"
+   },
+   "ko": "%lld장 남기고 다음",
+   "ja": "%lld枚を残して次へ"
+  },
+  "Keep this": {
+   "ko": "이걸 남기기",
+   "ja": "これを残す"
+  },
+  "Keeping": {
+   "ko": "남기는 중",
+   "ja": "残す"
+  },
+  "Long-press another photo to compare": {
+   "ko": "비교할 사진을 하나 더 길게 누르세요",
+   "ja": "比べる写真をもう1枚長押ししてください"
+  },
+  "Long-press two photos to compare them": {
+   "ko": "사진 두 장을 길게 누르면 나란히 비교해요",
+   "ja": "2枚の写真を長押しすると並べて比較できます"
+  },
+  "Mark all for deletion": {
+   "ko": "모두 지울 후보로",
+   "ja": "すべて削除候補にする"
+  },
+  "More": {
+   "ko": "더 보기",
+   "ja": "その他"
+  },
+  "Rename trip": {
+   "ko": "여행 이름 바꾸기",
+   "ja": "旅行名を変更"
+  },
+  "Results": {
+   "ko": "결과",
+   "ja": "結果"
+  },
+  "Save": {
+   "ko": "저장",
+   "ja": "保存"
+  },
+  "Similar photos": {
+   "ko": "비슷한 사진 묶음",
+   "ja": "似た写真のグループ"
+  },
+  "Similar screenshots": {
+   "ko": "스크린샷 묶음",
+   "ja": "スクリーンショットのグループ"
+  },
+  "Single photos": {
+   "ko": "한 장짜리 사진",
+   "ja": "1枚だけの写真"
+  },
+  "Swipe": {
+   "ko": "스와이프",
+   "ja": "スワイプ"
+  },
+  "Too bright": {
+   "ko": "노출 과다",
+   "ja": "明るすぎ"
+  },
+  "Trip name": {
+   "ko": "여행 이름",
+   "ja": "旅行名"
+  }
  }
 }

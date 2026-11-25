@@ -37,12 +37,14 @@ struct NewTripView: View {
                         let videos = handled.count - photos
                         Text("\(photos) photos · \(videos) short videos")
                             .font(.headline)
+                        if !handled.isEmpty {
                         LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 4), count: 4), spacing: 4) {
                             ForEach(handled.prefix(8)) { item in
                                 AssetImageView(id: item.id, maxPixel: 200)
                                     .aspectRatio(1, contentMode: .fit)
                                     .clipShape(.rect(cornerRadius: 6))
                             }
+                        }
                         }
                     }
                     if let issue {
