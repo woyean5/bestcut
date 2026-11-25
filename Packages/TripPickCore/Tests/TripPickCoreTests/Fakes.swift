@@ -14,6 +14,7 @@ final class FakePhotoLibrary: PhotoLibrary, @unchecked Sendable {
     var items: [MediaItem] = []
     var images: [String: CGImage] = [:]
     var albums: [String: [String]] = [:]
+    var albumFolders: [String: String] = [:]
     var deleted: [String] = []
     var deleteShouldCancel = false
     var state: PermissionState = .full
@@ -24,7 +25,8 @@ final class FakePhotoLibrary: PhotoLibrary, @unchecked Sendable {
         items.filter { interval.contains($0.creationDate) }.sorted { $0.creationDate < $1.creationDate }
     }
     func analysisImage(for id: String, maxPixel: Int) async -> CGImage? { images[id] }
-    func addToAlbum(named name: String, add: [String], remove: [String]) async throws {
+    func addToAlbum(named name: String, add: [String], remove: [String], inFolder folder: String?) async throws {
+        if let folder { albumFolders[name] = folder }
         var current = albums[name] ?? []
         for id in add where !current.contains(id) { current.append(id) }
         current.removeAll { remove.contains($0) }

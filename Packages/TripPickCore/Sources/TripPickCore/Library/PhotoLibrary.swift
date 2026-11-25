@@ -16,6 +16,13 @@ public protocol PhotoLibrary: Sendable {
     /// A downscaled image for analysis or display; nil when it cannot be loaded.
     func analysisImage(for id: String, maxPixel: Int) async -> CGImage?
     /// Adds to (creating if needed) the album with this exact name, and removes the given items from it.
-    func addToAlbum(named name: String, add: [String], remove: [String]) async throws
+    /// With a folder name, the album lives inside that Photos folder (created if needed).
+    func addToAlbum(named name: String, add: [String], remove: [String], inFolder folder: String?) async throws
     func delete(_ ids: [String]) async throws -> DeleteOutcome
+}
+
+public extension PhotoLibrary {
+    func addToAlbum(named name: String, add: [String], remove: [String]) async throws {
+        try await addToAlbum(named: name, add: add, remove: remove, inFolder: nil)
+    }
 }
