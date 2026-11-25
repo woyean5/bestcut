@@ -1,0 +1,58 @@
+import SwiftData
+import SwiftUI
+import TripPickCore
+
+@main
+struct TripPickApp: App {
+    @State private var model = AppModel()
+    private let container: ModelContainer = {
+        do { return try TripPickSchema.container(inMemory: false) }
+        catch { fatalError("Could not open the database: \(error)") }
+    }()
+
+    var body: some Scene {
+        WindowGroup {
+            RootView()
+                .environment(model)
+        }
+        .modelContainer(container)
+    }
+}
+
+/// App-wide state: the photo library and its permission.
+@MainActor @Observable final class AppModel {
+    let library: PhotoLibrary = PhotoKitLibrary()
+    private(set) var permission: PermissionState
+
+    init() {
+        permission = library.permission()
+    }
+
+    func requestPermission() async {
+        permission = await library.requestPermission()
+    }
+
+    func refreshPermission() {
+        permission = library.permission()
+    }
+}
+
+struct RootView: View {
+    @Environment(AppModel.self) private var model
+    @Environment(\.scenePhase) private var scenePhase
+    @AppStorage(AppSettingsKey.appearance) private var appearance = AppearanceMode.system.rawValue
+
+    var body: some View {
+        Group {
+            if model.permission.canUseLibrary {
+                TripListView()
+            } else {
+                PermissionView(state: model.permission)
+            }
+        }
+        .preferredColorScheme(AppearanceMode(rawValue: appearance)?.colorScheme)
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { model.refreshPermission() }
+        }
+    }
+}
