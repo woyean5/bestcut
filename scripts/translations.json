@@ -643,6 +643,11 @@
    "ko": "사진은 iPhone 밖으로 나가지 않아요",
    "ja": "写真はiPhoneの外に出ません",
    "zh-Hans": "照片只留在 iPhone 上"
+  },
+  "Leave as is": {
+   "ko": "그대로 두기",
+   "ja": "そのまま",
+   "zh-Hans": "保持原样"
   }
  }
 }

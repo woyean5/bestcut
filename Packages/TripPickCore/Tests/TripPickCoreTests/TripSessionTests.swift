@@ -163,3 +163,29 @@ private let defaults = SessionSettings(recommendationEnabled: true, shortVideoMa
     #expect(lib.albumFolders["B"] == nil)
     #expect(lib.albums["B"] == ["k"])
 }
+
+@MainActor @Test func reviewCanChangeOnePhotosDecision() {
+    let s = makeSession(items: [item("a"), item("b", at: 9000), item("fav", at: 20000, favorite: true)])
+    s.swipe("a", keep: false)
+    s.setDecision(.keep, for: "a")
+    #expect(s.decision("a") == .keep)
+    s.setDecision(.untouched, for: "a")
+    #expect(s.decision("a") == .untouched)
+    s.setDecision(.deleteCandidate, for: "fav")
+    #expect(s.decision("fav") == .deleteCandidate)
+    #expect(s.summary.deleteCandidates == 1)
+}
+@MainActor @Test func itemsByDecisionAreInShootingOrder() {
+    let s = makeSession(items: [item("late", at: 9000), item("early"), item("mid", at: 5000)])
+    s.swipe("late", keep: false)
+    s.swipe("early", keep: false)
+    #expect(s.items(with: .deleteCandidate) == ["early", "late"])
+    #expect(s.items(with: .untouched) == ["mid"])
+}
+@MainActor @Test func keptScreenshotsAreListedApart() {
+    let s = makeSession(items: [item("p"), item("sc", .screenshot, at: 9000)])
+    s.swipe("p", keep: true)
+    s.swipe("sc", keep: true)
+    #expect(s.items(with: .keep, screenshots: false) == ["p"])
+    #expect(s.items(with: .keep, screenshots: true) == ["sc"])
+}

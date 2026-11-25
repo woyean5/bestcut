@@ -43,10 +43,10 @@ struct SummaryView: View {
                 }
             }
             Section {
-                row("Best album", value: s.best, icon: "star")
-                row("Screenshot album", value: s.screenshots, icon: "rectangle.on.rectangle")
-                row("Marked for deletion", value: s.deleteCandidates, icon: "trash")
-                row("Left as they are", value: s.untouched, icon: "circle.dashed")
+                row("Best album", value: s.best, icon: "star", list: .init(decision: .keep, screenshots: false))
+                row("Screenshot album", value: s.screenshots, icon: "rectangle.on.rectangle", list: .init(decision: .keep, screenshots: true))
+                row("Marked for deletion", value: s.deleteCandidates, icon: "trash", list: .init(decision: .deleteCandidate, screenshots: nil))
+                row("Left as they are", value: s.untouched, icon: "circle.dashed", list: .init(decision: .untouched, screenshots: nil))
             } footer: {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Deleted photos stay in Recently Deleted for 30 days, so you can still recover them.")
@@ -80,11 +80,17 @@ struct SummaryView: View {
         .overlay { if working { ProgressView().controlSize(.large) } }
     }
 
-    private func row(_ title: LocalizedStringKey, value: Int, icon: String) -> some View {
-        LabeledContent {
+    /// Tapping a row shows those photos so they can be checked, and changed, before finishing.
+    @ViewBuilder private func row(_ title: LocalizedStringKey, value: Int, icon: String, list: ReviewList) -> some View {
+        let content = LabeledContent {
             Text(value, format: .number).monospacedDigit()
         } label: {
             Label(title, systemImage: icon)
+        }
+        if value > 0 {
+            NavigationLink { DecisionListView(session: session, list: list, title: title) } label: { content }
+        } else {
+            content
         }
     }
 

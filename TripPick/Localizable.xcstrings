@@ -1463,6 +1463,28 @@
         }
       }
     },
+    "Leave as is": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "そのまま"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "그대로 두기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持原样"
+          }
+        }
+      }
+    },
     "Left as they are": {
       "localizations": {
         "ja": {
