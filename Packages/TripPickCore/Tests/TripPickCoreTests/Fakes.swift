@@ -37,3 +37,14 @@ final class FakePhotoLibrary: PhotoLibrary, @unchecked Sendable {
         return .deleted(ids.count)
     }
 }
+
+final class RecordingAnalyzer: ImageAnalyzing, @unchecked Sendable {
+    private let lock = NSLock()
+    private var _calls: [String] = []
+    var calls: [String] { lock.withLock { _calls } }
+
+    func analyze(_ image: CGImage, id: String, kind: MediaKind) async -> AnalysisResult {
+        lock.withLock { _calls.append(id) }
+        return AnalysisResult(id: id, flags: [], sharpness: 100, aesthetics: 0, featurePrint: nil, failed: false)
+    }
+}
