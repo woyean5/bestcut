@@ -304,6 +304,35 @@
   "Trip name": {
    "ko": "여행 이름",
    "ja": "旅行名"
+  },
+  "%lld / %lld": {
+   "en": "%1$lld / %2$lld",
+   "ko": "%1$lld / %2$lld",
+   "ja": "%1$lld / %2$lld"
+  },
+  "All picked": {
+   "ko": "다 골랐어요",
+   "ja": "選び終わりました"
+  },
+  "Delete later": {
+   "ko": "지울 후보",
+   "ja": "削除候補"
+  },
+  "Nothing left to decide here.": {
+   "ko": "여기서 더 정할 사진이 없어요.",
+   "ja": "ここで決める写真はもうありません。"
+  },
+  "One by one": {
+   "ko": "한 장씩 보기",
+   "ja": "1枚ずつ見る"
+  },
+  "See results": {
+   "ko": "결과 보기",
+   "ja": "結果を見る"
+  },
+  "Undo": {
+   "ko": "되돌리기",
+   "ja": "取り消す"
   }
  }
 }

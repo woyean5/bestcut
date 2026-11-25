@@ -1,6 +1,28 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "%lld / %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld"
+          }
+        }
+      }
+    },
     "%lld groups": {
       "localizations": {
         "en": {
@@ -189,6 +211,22 @@
         }
       }
     },
+    "All picked": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選び終わりました"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "다 골랐어요"
+          }
+        }
+      }
+    },
     "Allow photo access": {
       "localizations": {
         "ja": {
@@ -345,6 +383,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "다크"
+          }
+        }
+      }
+    },
+    "Delete later": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除候補"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "지울 후보"
           }
         }
       }
@@ -671,6 +725,38 @@
         }
       }
     },
+    "Nothing left to decide here.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ここで決める写真はもうありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "여기서 더 정할 사진이 없어요."
+          }
+        }
+      }
+    },
+    "One by one": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1枚ずつ見る"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "한 장씩 보기"
+          }
+        }
+      }
+    },
     "Open Settings": {
       "localizations": {
         "ja": {
@@ -795,6 +881,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "저장"
+          }
+        }
+      }
+    },
+    "See results": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結果を見る"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "결과 보기"
           }
         }
       }
@@ -1083,6 +1185,22 @@
           "stringUnit": {
             "state": "translated",
             "value": "흔들린 사진을 찾고 비슷한 사진을 묶으려면 사진 접근 권한이 필요해요. 설정에서 켤 수 있어요."
+          }
+        }
+      }
+    },
+    "Undo": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取り消す"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "되돌리기"
           }
         }
       }
