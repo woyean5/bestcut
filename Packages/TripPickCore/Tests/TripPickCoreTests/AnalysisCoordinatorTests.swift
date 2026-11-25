@@ -30,3 +30,16 @@ import Testing
         .analyze(items) { _ in }
     #expect(out.count == 120)
 }
+
+@MainActor @Test func failedResultsAreNotCachedSoTheyRetry() async throws {
+    let container = try TripPickSchema.container(inMemory: true)
+    let cache = AnalysisCache(context: container.mainContext)
+    let lib = FakePhotoLibrary()
+    _ = await AnalysisCoordinator(library: lib, analyzer: RecordingAnalyzer(), cache: cache).analyze([item("offline")]) { _ in }
+    #expect(cache.results(for: ["offline"]).isEmpty)
+    lib.images = ["offline": TestImages.solid(gray: 0.5)]
+    let analyzer = RecordingAnalyzer()
+    let out = await AnalysisCoordinator(library: lib, analyzer: analyzer, cache: cache).analyze([item("offline")]) { _ in }
+    #expect(analyzer.calls == ["offline"])
+    #expect(out["offline"]?.failed == false)
+}

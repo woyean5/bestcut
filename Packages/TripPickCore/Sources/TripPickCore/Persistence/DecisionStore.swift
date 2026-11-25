@@ -37,9 +37,19 @@ import SwiftData
         try? context.save()
     }
 
+    /// Fetches only the requested records, in chunks so the query stays small.
     private func records(for ids: [String]) -> [DecisionRecord] {
-        let wanted = Set(ids)
-        let all = (try? context.fetch(FetchDescriptor<DecisionRecord>())) ?? []
-        return all.filter { wanted.contains($0.assetID) }
+        var out: [DecisionRecord] = []
+        for chunk in ids.chunked(500) {
+            let descriptor = FetchDescriptor<DecisionRecord>(predicate: #Predicate { chunk.contains($0.assetID) })
+            out += (try? context.fetch(descriptor)) ?? []
+        }
+        return out
+    }
+}
+
+extension Array {
+    func chunked(_ size: Int) -> [[Element]] {
+        stride(from: 0, to: count, by: size).map { Array(self[$0..<Swift.min($0 + size, count)]) }
     }
 }

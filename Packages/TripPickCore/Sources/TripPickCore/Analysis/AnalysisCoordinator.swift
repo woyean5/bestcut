@@ -54,7 +54,8 @@ public struct AnalysisProgress: Sendable, Equatable {
             for _ in 0..<concurrency { if !addNext() { break } }
             for await result in group {
                 results[result.id] = result
-                pending.append(result)
+                // Failed loads (often iCloud-only photos while offline) are not cached, so they retry next time.
+                if !result.failed { pending.append(result) }
                 if pending.count >= saveEvery {
                     cache.save(pending)
                     pending.removeAll()

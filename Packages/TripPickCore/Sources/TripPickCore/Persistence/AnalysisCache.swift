@@ -11,10 +11,8 @@ import SwiftData
 
     /// Cached results made by the current analyzer version.
     public func results(for ids: [String]) -> [String: AnalysisResult] {
-        let wanted = Set(ids)
-        let all = (try? context.fetch(FetchDescriptor<AnalysisRecord>())) ?? []
         var out: [String: AnalysisResult] = [:]
-        for r in all where wanted.contains(r.assetID) && r.analyzerVersion == Self.analyzerVersion {
+        for r in records(for: ids) where r.analyzerVersion == Self.analyzerVersion {
             out[r.assetID] = AnalysisResult(id: r.assetID, flags: QualityFlags(rawValue: r.flagsRaw), sharpness: r.sharpness,
                                             aesthetics: r.aesthetics, featurePrint: r.featurePrint, failed: r.failed)
         }
@@ -22,13 +20,20 @@ import SwiftData
     }
 
     public func save(_ results: [AnalysisResult]) {
-        let ids = Set(results.map(\.id))
-        let all = (try? context.fetch(FetchDescriptor<AnalysisRecord>())) ?? []
-        for r in all where ids.contains(r.assetID) { context.delete(r) }
+        for r in records(for: results.map(\.id)) { context.delete(r) }
         for r in results {
             context.insert(AnalysisRecord(assetID: r.id, flagsRaw: r.flags.rawValue, sharpness: r.sharpness, aesthetics: r.aesthetics,
                                           featurePrint: r.featurePrint, failed: r.failed, analyzerVersion: Self.analyzerVersion))
         }
         try? context.save()
+    }
+
+    private func records(for ids: [String]) -> [AnalysisRecord] {
+        var out: [AnalysisRecord] = []
+        for chunk in ids.chunked(500) {
+            let descriptor = FetchDescriptor<AnalysisRecord>(predicate: #Predicate { chunk.contains($0.assetID) })
+            out += (try? context.fetch(descriptor)) ?? []
+        }
+        return out
     }
 }

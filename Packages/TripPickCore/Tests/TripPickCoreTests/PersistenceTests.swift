@@ -33,3 +33,26 @@ import Testing
     try container.mainContext.save()
     #expect(try ModelContext(container).fetch(FetchDescriptor<TripRecord>()).map(\.name) == ["Jeju"])
 }
+
+@MainActor @Test func decisionWritesStayFastWithManyStoredDecisions() throws {
+    let container = try TripPickSchema.container(inMemory: true)
+    let store = SwiftDataDecisionStore(context: container.mainContext)
+    store.set(.keep, for: (0..<20_000).map { "old\($0)" })
+    let clock = ContinuousClock()
+    let elapsed = clock.measure {
+        for i in 0..<100 { store.set(.deleteCandidate, for: ["new\(i)"]) }
+    }
+    #expect(store.decisions(for: ["new5", "old7"]) == ["new5": .deleteCandidate, "old7": .keep])
+    #expect(elapsed < .seconds(2), "100 swipes took \(elapsed)")
+}
+@MainActor @Test func analysisCacheSaveStaysFastWithManyCachedResults() throws {
+    let container = try TripPickSchema.container(inMemory: true)
+    let cache = AnalysisCache(context: container.mainContext)
+    func r(_ id: String) -> AnalysisResult { AnalysisResult(id: id, flags: [], sharpness: 1, aesthetics: 0, featurePrint: Data(count: 2_000), failed: false) }
+    cache.save((0..<10_000).map { r("old\($0)") })
+    let elapsed = ContinuousClock().measure {
+        for i in 0..<20 { cache.save((0..<50).map { r("new\(i)-\($0)") }) }
+    }
+    #expect(cache.results(for: ["new3-7", "old9"]).count == 2)
+    #expect(elapsed < .seconds(2), "20 batch saves took \(elapsed)")
+}
