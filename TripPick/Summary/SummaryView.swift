@@ -11,7 +11,7 @@ struct SummaryView: View {
     @State private var errorMessage: String?
 
     enum Outcome: Equatable {
-        case albumOnly, deleted(Int), deleteCancelled
+        case albumOnly, deleted(Int), deletedOnly(Int), deleteCancelled, deleteOnlyCancelled
     }
 
     var body: some View {
@@ -19,7 +19,7 @@ struct SummaryView: View {
         List {
             if let outcome {
                 Section {
-                    Label(message(outcome), systemImage: outcome == .deleteCancelled ? "info.circle" : "checkmark.circle.fill")
+                    Label(message(outcome), systemImage: outcome == .deleteCancelled || outcome == .deleteOnlyCancelled ? "info.circle" : "checkmark.circle.fill")
                 }
             }
             if let errorMessage {
@@ -65,6 +65,11 @@ struct SummaryView: View {
                         }
                         .buttonStyle(.glassProminent)
                         .tint(.red)
+                        Button { finish(delete: true, makeAlbums: false) } label: {
+                            Text("Delete \(s.deleteCandidates) without albums").frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.glass)
+                        .foregroundStyle(.red)
                     }
                     Button { finish(delete: false) } label: {
                         Text("Make albums only").frame(maxWidth: .infinity)
@@ -104,10 +109,12 @@ struct SummaryView: View {
         case .albumOnly: L10n.string("Albums are ready in Photos.")
         case .deleted(let n): L10n.string("Albums are ready, and \(n) items were deleted.")
         case .deleteCancelled: L10n.string("Deletion was canceled. Your albums are ready.")
+        case .deletedOnly(let n): L10n.string("\(n) items were deleted.")
+        case .deleteOnlyCancelled: L10n.string("Deletion was canceled.")
         }
     }
 
-    private func finish(delete: Bool) {
+    private func finish(delete: Bool, makeAlbums: Bool = true) {
         working = true
         errorMessage = nil
         Task {
@@ -115,8 +122,12 @@ struct SummaryView: View {
             do {
                 let result = try await session.finalize(bestAlbum: L10n.string("\(tripName) Best"),
                                                         screenshotAlbum: L10n.string("\(tripName) Screenshots"),
-                                                        deleteCandidates: delete, folder: folderName)
-                outcome = result.deleteCancelled ? .deleteCancelled : (delete ? .deleted(result.deleted) : .albumOnly)
+                                                        deleteCandidates: delete, folder: folderName, makeAlbums: makeAlbums)
+                if !makeAlbums {
+                    outcome = result.deleteCancelled ? .deleteOnlyCancelled : .deletedOnly(result.deleted)
+                } else {
+                    outcome = result.deleteCancelled ? .deleteCancelled : (delete ? .deleted(result.deleted) : .albumOnly)
+                }
             } catch {
                 errorMessage = L10n.string("Couldn't update your photo library. Try again.")
             }

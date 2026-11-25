@@ -185,6 +185,46 @@
         }
       }
     },
+    "%lld items were deleted.": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld item was deleted."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld items were deleted."
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld件を削除しました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld개를 지웠어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已删除 %lld 项。"
+          }
+        }
+      }
+    },
     "%lld of %lld": {
       "localizations": {
         "ja": {
@@ -929,6 +969,28 @@
         }
       }
     },
+    "Delete %lld without albums": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アルバムを作らずに%lld件を削除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앨범 없이 %lld개만 지우기"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不创建相簿，仅删除 %lld 项"
+          }
+        }
+      }
+    },
     "Delete later": {
       "localizations": {
         "ja": {
@@ -991,6 +1053,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除照片后，它也会从其他相簿和共享相簿中移除。"
+          }
+        }
+      }
+    },
+    "Deletion was canceled.": {
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除をキャンセルしました。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제를 취소했어요."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已取消删除。"
           }
         }
       }

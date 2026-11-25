@@ -135,13 +135,14 @@ import Observation
     // MARK: Finish
 
     /// Puts kept items into the albums, takes this trip's delete candidates out of them, and optionally deletes those.
-    public func finalize(bestAlbum: String, screenshotAlbum: String, deleteCandidates: Bool, folder: String? = nil) async throws -> FinalizeResult {
+    public func finalize(bestAlbum: String, screenshotAlbum: String, deleteCandidates: Bool, folder: String? = nil,
+                         makeAlbums: Bool = true) async throws -> FinalizeResult {
         let all = buckets.allItemIDs
         let isShot = { (id: String) in self.items[id]?.kind == .screenshot }
         let keep = all.filter { decision($0) == .keep }
         let deletes = all.filter { decision($0) == .deleteCandidate }
         var updated = false
-        for (name, shots) in [(bestAlbum, false), (screenshotAlbum, true)] {
+        for (name, shots) in [(bestAlbum, false), (screenshotAlbum, true)] where makeAlbums {
             let add = keep.filter { isShot($0) == shots }
             let remove = deletes.filter { isShot($0) == shots }
             guard !add.isEmpty || !remove.isEmpty else { continue }

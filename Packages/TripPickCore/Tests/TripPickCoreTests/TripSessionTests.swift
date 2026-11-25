@@ -189,3 +189,15 @@ private let defaults = SessionSettings(recommendationEnabled: true, shortVideoMa
     #expect(s.items(with: .keep, screenshots: false) == ["p"])
     #expect(s.items(with: .keep, screenshots: true) == ["sc"])
 }
+
+@MainActor @Test func deleteWithoutAlbumsDeletesOnlyCandidates() async throws {
+    let (s, lib) = makeSessionWithLibrary(items: [item("k"), item("d", at: 9000), item("u", at: 20000)])
+    s.swipe("k", keep: true)
+    s.swipe("d", keep: false)
+    let result = try await s.finalize(bestAlbum: "B", screenshotAlbum: "S", deleteCandidates: true, makeAlbums: false)
+    #expect(result == FinalizeResult(albumUpdated: false, deleted: 1, deleteCancelled: false))
+    #expect(lib.albums.isEmpty)
+    #expect(lib.deleted == ["d"])
+    #expect(s.decision("k") == .keep)
+    #expect(s.summary.total == 2)
+}

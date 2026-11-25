@@ -648,6 +648,25 @@
    "ko": "그대로 두기",
    "ja": "そのまま",
    "zh-Hans": "保持原样"
+  },
+  "%lld items were deleted.": {
+   "en": {
+    "one": "%lld item was deleted.",
+    "other": "%lld items were deleted."
+   },
+   "ko": "%lld개를 지웠어요.",
+   "ja": "%lld件を削除しました。",
+   "zh-Hans": "已删除 %lld 项。"
+  },
+  "Delete %lld without albums": {
+   "ko": "앨범 없이 %lld개만 지우기",
+   "ja": "アルバムを作らずに%lld件を削除",
+   "zh-Hans": "不创建相簿，仅删除 %lld 项"
+  },
+  "Deletion was canceled.": {
+   "ko": "삭제를 취소했어요.",
+   "ja": "削除をキャンセルしました。",
+   "zh-Hans": "已取消删除。"
   }
  }
 }
