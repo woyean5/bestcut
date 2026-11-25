@@ -158,6 +158,7 @@ struct FolderView: View {
             }
         }
         .navigationTitle(folder.name)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Rename", systemImage: "pencil") { newName = folder.name; renaming = true }
