@@ -84,30 +84,70 @@ for slide in slides {
     text.draw(with: CGRect(x: textBox.minX, y: textBox.minY + (textBox.height - measured.height) / 2,
                            width: textBox.width, height: measured.height), options: [.usesLineFragmentOrigin])
 
-    // Phone: screen 1060 wide, frame 26 px, runs off the bottom edge.
-    let screenW: CGFloat = 1060, scale = screenW / CGFloat(shot.width)
+    // Phone: the whole device is shown, like Apple's own product shots — titanium band, black bezel, side buttons.
+    let screenW: CGFloat = 960, scale = screenW / CGFloat(shot.width)
     let screenH = CGFloat(shot.height) * scale
-    let bezel: CGFloat = 26
+    let bezel: CGFloat = 26, band: CGFloat = 13
     let screenTop = H - 640
     let screen = CGRect(x: (W - screenW) / 2, y: screenTop - screenH, width: screenW, height: screenH)
-    let frame = screen.insetBy(dx: -bezel, dy: -bezel)
+    let screenRadius = screenW * 0.14
+    let glass = screen.insetBy(dx: -bezel, dy: -bezel)            // black glass edge
+    let body = glass.insetBy(dx: -band, dy: -band)                // titanium band
+    let bodyRadius = screenRadius + bezel + band
+
+    // Side buttons sit behind the band so only their outer edge shows.
+    func button(_ x: CGFloat, _ topFromBody: CGFloat, _ length: CGFloat) {
+        let r = CGRect(x: x, y: body.maxY - topFromBody - length, width: 14, height: length)
+        let g = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(),
+                           colors: [hex(0x3A3A3C).cgColor, hex(0x8E8E93).cgColor, hex(0x3A3A3C).cgColor] as CFArray, locations: [0, 0.5, 1])!
+        ctx.saveGState()
+        ctx.addPath(roundedPath(r, 6)); ctx.clip()
+        ctx.drawLinearGradient(g, start: CGPoint(x: r.minX, y: 0), end: CGPoint(x: r.maxX, y: 0), options: [])
+        ctx.restoreGState()
+    }
+    let left = body.minX - 9, right = body.maxX - 5
+    button(left, 330, 90)    // action button
+    button(left, 480, 170)   // volume up
+    button(left, 680, 170)   // volume down
+    button(right, 560, 260)  // side button
+    button(right, 1160, 150) // camera control
+
+    // Body with a soft floor shadow.
     ctx.saveGState()
-    ctx.setShadow(offset: CGSize(width: 0, height: -24), blur: 80, color: NSColor.black.withAlphaComponent(0.22).cgColor)
-    ctx.addPath(roundedPath(frame, 170))
-    ctx.setFillColor(hex(0x1C1C1E).cgColor)
+    ctx.setShadow(offset: CGSize(width: 0, height: -30), blur: 90, color: NSColor.black.withAlphaComponent(0.25).cgColor)
+    ctx.addPath(roundedPath(body, bodyRadius))
+    ctx.setFillColor(hex(0x2C2C2E).cgColor)
     ctx.fillPath()
     ctx.restoreGState()
-    // Thin metal edge
-    ctx.addPath(roundedPath(frame.insetBy(dx: 3, dy: 3), 167))
-    ctx.setStrokeColor(hex(0x48484A).cgColor)
-    ctx.setLineWidth(4)
+    // Brushed titanium: a horizontal gradient that is lighter at the edges, as light catches the rounded sides.
+    ctx.saveGState()
+    ctx.addPath(roundedPath(body, bodyRadius)); ctx.clip()
+    let metal = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(),
+                           colors: [hex(0x9A9AA0).cgColor, hex(0x4A4A4E).cgColor, hex(0x3A3A3D).cgColor,
+                                    hex(0x4A4A4E).cgColor, hex(0x9A9AA0).cgColor] as CFArray,
+                           locations: [0, 0.04, 0.5, 0.96, 1])!
+    ctx.drawLinearGradient(metal, start: CGPoint(x: body.minX, y: 0), end: CGPoint(x: body.maxX, y: 0), options: [])
+    ctx.restoreGState()
+    // Bright rim on the outer edge
+    ctx.addPath(roundedPath(body.insetBy(dx: 1.5, dy: 1.5), bodyRadius - 1.5))
+    ctx.setStrokeColor(hex(0xC7C7CC).withAlphaComponent(0.7).cgColor)
+    ctx.setLineWidth(3)
     ctx.strokePath()
+    // Black glass bezel
+    ctx.addPath(roundedPath(glass, screenRadius + bezel))
+    ctx.setFillColor(hex(0x050505).cgColor)
+    ctx.fillPath()
     // Screen
     ctx.saveGState()
-    ctx.addPath(roundedPath(screen, 146))
+    ctx.addPath(roundedPath(screen, screenRadius))
     ctx.clip()
     ctx.draw(shot, in: screen)
     ctx.restoreGState()
+    // Faint glass reflection across the top of the bezel
+    ctx.addPath(roundedPath(glass.insetBy(dx: 2, dy: 2), screenRadius + bezel - 2))
+    ctx.setStrokeColor(NSColor.white.withAlphaComponent(0.08).cgColor)
+    ctx.setLineWidth(2)
+    ctx.strokePath()
     // The simulator screenshot already shows the Dynamic Island.
     NSGraphicsContext.restoreGraphicsState()
     let png = rep.representation(using: .png, properties: [:])!
