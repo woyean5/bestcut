@@ -17,6 +17,8 @@ struct BadgeRow: View {
             if flags.contains(.dark) { badge("Dark", "moon.fill", .orange) }
             if flags.contains(.overexposed) { badge("Too bright", "sun.max.fill", .orange) }
         }
+        // Labels only: touches go to the photo underneath, so tapping or long-pressing near a badge still works.
+        .allowsHitTesting(false)
     }
 
     @ViewBuilder private func badge(_ title: LocalizedStringKey, _ icon: String, _ tint: Color) -> some View {

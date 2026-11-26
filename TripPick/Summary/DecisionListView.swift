@@ -60,11 +60,11 @@ struct PhotoDecisionView: View {
             VStack(spacing: 16) {
                 AssetImageView(id: id, maxPixel: 2000, contentMode: .fit, isVideo: session.items[id]?.kind == .video)
                     .clipShape(.rect(cornerRadius: 16))
-                    .frame(maxHeight: .infinity)
                     .overlay(alignment: .topLeading) {
                         BadgeRow(flags: session.analyses[id]?.flags ?? [], isFavorite: session.items[id]?.isFavorite ?? false)
                             .padding(10)
                     }
+                    .frame(maxHeight: .infinity)
                 GlassEffectContainer {
                     HStack(spacing: 10) {
                         choice(.keep, "Keep", "heart.fill", .green, current: current)

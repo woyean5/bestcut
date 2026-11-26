@@ -22,6 +22,7 @@ struct CompareView: View {
                 }
             }
             .padding(.horizontal)
+            .padding(.bottom, 8)
             .gesture(
                 MagnifyGesture()
                     .onChanged { scale = min(5, max(1, baseScale * $0.magnification)) }
@@ -62,5 +63,6 @@ struct CompareView: View {
                 BadgeRow(flags: session.analyses[id]?.flags ?? [], isFavorite: session.items[id]?.isFavorite ?? false)
                     .padding(10)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

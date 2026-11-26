@@ -32,6 +32,7 @@ struct AssetImageView: View {
             }
         }
         .clipped()
+        .modifier(FitToImage(ratio: contentMode == .fit ? image.map { CGFloat($0.width) / CGFloat(max($0.height, 1)) } : nil))
         .task(id: id) {
             player = nil
             image = await model.library.analysisImage(for: id, maxPixel: maxPixel)
@@ -49,5 +50,13 @@ struct AssetImageView: View {
         let p = AVPlayer(playerItem: item)
         player = p
         p.play()
+    }
+}
+
+/// In fit mode the view takes the photo's own shape, so badges and buttons laid over it sit on the photo's corners.
+private struct FitToImage: ViewModifier {
+    let ratio: CGFloat?
+    func body(content: Content) -> some View {
+        if let ratio { content.aspectRatio(ratio, contentMode: .fit) } else { content }
     }
 }

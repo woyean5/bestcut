@@ -100,7 +100,7 @@ struct NewTripView: View {
                     Button("Cancel", systemImage: "xmark") { dismiss() }
                 }
             }
-            .safeAreaInset(edge: .bottom) {
+            .safeAreaBar(edge: .bottom) {
                 Button(segments.isEmpty ? "Start organizing" : "Organize as one") { create() }
                     .buttonStyle(.glassProminent)
                     .controlSize(.large)

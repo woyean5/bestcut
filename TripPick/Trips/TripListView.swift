@@ -62,7 +62,7 @@ struct TripListView: View {
                     }
                 }
             }
-            .safeAreaInset(edge: .bottom) {
+            .safeAreaBar(edge: .bottom) {
                 Button("Start a new cleanup", systemImage: "plus") { showNewTrip = true }
                     .buttonStyle(.glassProminent)
                     .controlSize(.large)

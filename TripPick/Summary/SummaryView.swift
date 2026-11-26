@@ -54,9 +54,11 @@ struct SummaryView: View {
                 }
             }
         }
+        // The buttons below cover the list's end; a hard edge keeps text from showing through them on short screens.
+        .scrollEdgeEffectStyle(.hard, for: .bottom)
         .navigationTitle(Text("Results"))
         .navigationBarTitleDisplayMode(.inline)
-        .safeAreaInset(edge: .bottom) {
+        .safeAreaBar(edge: .bottom) {
             GlassEffectContainer {
                 VStack(spacing: 10) {
                     if s.deleteCandidates > 0 {
@@ -77,6 +79,8 @@ struct SummaryView: View {
                     .buttonStyle(.glass)
                 }
                 .controlSize(.large)
+                // Three stacked buttons: past this size they would cover most of a small screen.
+                .dynamicTypeSize(...DynamicTypeSize.xxLarge)
                 .disabled(working || (s.best + s.screenshots + s.deleteCandidates == 0))
                 .frame(maxWidth: 560)
                 .padding(.horizontal)

@@ -37,20 +37,17 @@ struct ReviewSetView: View {
         let recommended = session.recommendation(in: set)
         let focus = focused ?? set.itemIDs[0]
         VStack(spacing: 12) {
-            ZStack(alignment: .top) {
-                AssetImageView(id: focus, maxPixel: 1600, contentMode: .fit, isVideo: session.items[focus]?.kind == .video)
-                    .clipShape(.rect(cornerRadius: 20))
-                HStack {
+            AssetImageView(id: focus, maxPixel: 1600, contentMode: .fit, isVideo: session.items[focus]?.kind == .video)
+                .clipShape(.rect(cornerRadius: 20))
+                .overlay(alignment: .topLeading) {
                     BadgeRow(flags: session.analyses[focus]?.flags ?? [], isFavorite: session.items[focus]?.isFavorite ?? false,
                              isRecommended: focus == recommended)
-                    Spacer()
+                        .padding(10)
                 }
-                .padding(10)
-            }
-            .overlay(alignment: .bottomTrailing) {
-                keepToggle(focus, large: true).padding(12)
-            }
-            .frame(maxHeight: .infinity)
+                .overlay(alignment: .bottomTrailing) {
+                    keepToggle(focus, large: true).padding(12)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal)
 
             Text("\(set.itemIDs.count) in this group · \(selection.count) kept")
@@ -118,19 +115,34 @@ struct ReviewSetView: View {
             .onTapGesture { self.focused = id }
     }
 
-    private func keepToggle(_ id: String, large: Bool) -> some View {
+    @ViewBuilder private func keepToggle(_ id: String, large: Bool) -> some View {
         let kept = selection.contains(id)
-        return Button {
-            if kept { selection.remove(id) } else { selection.insert(id) }
-        } label: {
-            Image(systemName: kept ? "checkmark.circle.fill" : "circle")
-                .font(large ? .title : .body)
-                .foregroundStyle(kept ? Color.accentColor : .white)
-                .padding(large ? 8 : 2)
-                .glassEffect(.regular.interactive(), in: .circle)
+        let icon = Image(systemName: kept ? "checkmark.circle.fill" : "circle")
+            .foregroundStyle(kept ? Color.accentColor : .white)
+        if large {
+            Button {
+                toggleKeep(id)
+            } label: {
+                icon.font(.title).padding(8).glassEffect(.regular.interactive(), in: .circle)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(kept ? Text("Keep") : Text("Don't keep"))
+        } else {
+            // On a small thumbnail a button's enlarged touch area covers much of the photo, so taps meant to
+            // focus it, or long presses meant to compare, would flip "keep". Only the circle itself responds.
+            icon.font(.body).padding(2)
+                .glassEffect(.regular, in: .circle)
+                .contentShape(.circle)
+                .onTapGesture { toggleKeep(id) }
+                .accessibilityElement()
+                .accessibilityAddTraits(.isButton)
+                .accessibilityLabel(kept ? Text("Keep") : Text("Don't keep"))
+                .accessibilityAction { toggleKeep(id) }
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(kept ? Text("Keep") : Text("Don't keep"))
+    }
+
+    private func toggleKeep(_ id: String) {
+        if selection.contains(id) { selection.remove(id) } else { selection.insert(id) }
     }
 
     private func longPress(_ id: String) {

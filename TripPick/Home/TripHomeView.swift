@@ -17,6 +17,7 @@ struct TripHomeView: View {
     @Query private var folders: [FolderRecord]
     @State private var naming = false
     @State private var namingFailed = false
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     var body: some View {
         List {
@@ -39,12 +40,15 @@ struct TripHomeView: View {
                 }
             }
         }
+        .scrollEdgeEffectStyle(.hard, for: .bottom)
         .navigationTitle(trip.name)
-        .safeAreaInset(edge: .bottom) {
+        .safeAreaBar(edge: .bottom) {
             GlassEffectContainer {
-                HStack(spacing: 12) {
+                // Very large text: the two buttons stack so neither label breaks mid-word.
+                let stacked = typeSize.isAccessibilitySize
+                (stacked ? AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(spacing: 12))) {
                     NavigationLink(value: HomeRoute.swipe(singlesOnly: false)) {
-                        Label("Swipe", systemImage: "hand.draw")
+                        Label("Swipe", systemImage: "hand.draw").frame(maxWidth: stacked ? .infinity : nil)
                     }
                     .buttonStyle(.glass)
                     NavigationLink(value: session.nextReviewSet() != nil ? HomeRoute.review(.continueAll) : HomeRoute.swipe(singlesOnly: false)) {
@@ -53,6 +57,7 @@ struct TripHomeView: View {
                     .buttonStyle(.glassProminent)
                 }
                 .controlSize(.large)
+                .dynamicTypeSize(...DynamicTypeSize.accessibility1)
                 .frame(maxWidth: 560)
                 .padding(.horizontal)
                 .padding(.bottom, 8)
@@ -119,11 +124,15 @@ struct TripHomeView: View {
     }
 
     private func rowLabel(_ title: LocalizedStringKey, icon: String, detail: Text, done: Bool) -> some View {
-        HStack {
+        // Very large text: the count moves under the title instead of squeezing it.
+        let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4)) : AnyLayout(HStackLayout())
+        return layout {
             Label(title, systemImage: icon)
-            Spacer()
-            detail.foregroundStyle(.secondary)
-            if done { Image(systemName: "checkmark.circle.fill").foregroundStyle(.green) }
+            if !typeSize.isAccessibilitySize { Spacer() }
+            HStack {
+                detail.foregroundStyle(.secondary)
+                if done { Image(systemName: "checkmark.circle.fill").foregroundStyle(.green) }
+            }
         }
     }
 }
