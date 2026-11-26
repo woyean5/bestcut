@@ -78,6 +78,7 @@ struct SummaryView: View {
                 }
                 .controlSize(.large)
                 .disabled(working || (s.best + s.screenshots + s.deleteCandidates == 0))
+                .frame(maxWidth: 560)
                 .padding(.horizontal)
                 .padding(.bottom, 8)
             }

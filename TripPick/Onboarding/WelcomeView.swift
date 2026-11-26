@@ -23,6 +23,7 @@ struct WelcomeView: View {
                         row("lock.shield", "Your photos stay on iPhone", "Everything is analyzed on this iPhone and never leaves it.")
                     }
                     .padding(.horizontal, 36)
+                    .frame(maxWidth: 560)
                 }
             }
             Button(action: onContinue) {

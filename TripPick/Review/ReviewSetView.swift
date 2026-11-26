@@ -59,7 +59,7 @@ struct ReviewSetView: View {
                 .padding(.horizontal)
 
             ScrollView {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 6), count: 5), spacing: 6) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 62, maximum: 110), spacing: 6)], spacing: 6) {
                     ForEach(set.itemIDs, id: \.self) { id in
                         thumbnail(id, focused: id == focus, recommended: id == recommended)
                     }
