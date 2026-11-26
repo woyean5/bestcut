@@ -13,9 +13,13 @@ struct CompareView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 8) {
-                pane(pair.a)
-                pane(pair.b)
+            GeometryReader { geo in
+                let layout = geo.size.width > geo.size.height
+                    ? AnyLayout(HStackLayout(spacing: 8)) : AnyLayout(VStackLayout(spacing: 8))
+                layout {
+                    pane(pair.a)
+                    pane(pair.b)
+                }
             }
             .padding(.horizontal)
             .gesture(

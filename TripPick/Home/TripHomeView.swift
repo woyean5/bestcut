@@ -53,6 +53,7 @@ struct TripHomeView: View {
                     .buttonStyle(.glassProminent)
                 }
                 .controlSize(.large)
+                .frame(maxWidth: 560)
                 .padding(.horizontal)
                 .padding(.bottom, 8)
             }

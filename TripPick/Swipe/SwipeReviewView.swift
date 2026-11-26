@@ -65,9 +65,8 @@ struct SwipeReviewView: View {
 
     /// One fixed card size for every photo, whatever its shape.
     private func cardSize(in space: CGSize) -> CGSize {
-        let width = max(0, space.width - 40)
-        let height = min(width * 4 / 3, max(0, space.height - 150))
-        return CGSize(width: width, height: height)
+        let width = min(max(0, space.width - 40), max(0, space.height - 150) * 3 / 4)
+        return CGSize(width: width, height: width * 4 / 3)
     }
 
     /// The whole photo, never cropped: a blurred copy fills the card behind it.

@@ -76,7 +76,7 @@ struct NewTripView: View {
                         Text("\(photos) photos · \(videos) short videos")
                             .font(.headline)
                         if !handled.isEmpty {
-                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 4), count: 4), spacing: 4) {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 72), spacing: 4)], spacing: 4) {
                             ForEach(handled.prefix(8)) { item in
                                 Color.clear
                                     .aspectRatio(1, contentMode: .fit)

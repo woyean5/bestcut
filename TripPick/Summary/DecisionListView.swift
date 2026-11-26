@@ -20,7 +20,7 @@ struct DecisionListView: View {
                 ContentUnavailableView("All done here", systemImage: "checkmark.circle")
                     .padding(.top, 80)
             } else {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 3), count: 3), spacing: 3) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 110), spacing: 3)], spacing: 3) {
                     ForEach(ids, id: \.self) { id in
                         Color.clear
                             .aspectRatio(1, contentMode: .fit)
