@@ -110,7 +110,6 @@ for slide in slides {
     button(left, 480, 170)   // volume up
     button(left, 680, 170)   // volume down
     button(right, 560, 260)  // side button
-    button(right, 1160, 150) // camera control
 
     // Body with a soft floor shadow.
     ctx.saveGState()
