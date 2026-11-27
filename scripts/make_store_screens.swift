@@ -142,12 +142,17 @@ for slide in slides {
     ctx.clip()
     ctx.draw(shot, in: screen)
     ctx.restoreGState()
+    // Dynamic Island: simulator screenshots leave it out, so draw it at the iPhone's proportions.
+    let islandW = screenW * 0.284, islandH = screenW * 0.084
+    let island = CGRect(x: screen.midX - islandW / 2, y: screen.maxY - screenW * 0.025 - islandH, width: islandW, height: islandH)
+    ctx.addPath(roundedPath(island, islandH / 2))
+    ctx.setFillColor(NSColor.black.cgColor)
+    ctx.fillPath()
     // Faint glass reflection across the top of the bezel
     ctx.addPath(roundedPath(glass.insetBy(dx: 2, dy: 2), screenRadius + bezel - 2))
     ctx.setStrokeColor(NSColor.white.withAlphaComponent(0.08).cgColor)
     ctx.setLineWidth(2)
     ctx.strokePath()
-    // The simulator screenshot already shows the Dynamic Island.
     NSGraphicsContext.restoreGraphicsState()
     let png = rep.representation(using: .png, properties: [:])!
     try! png.write(to: outDir.appendingPathComponent(lang).appendingPathComponent(slide.shot + ".png"))

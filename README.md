@@ -18,6 +18,12 @@
 
 한국어, English, 日本語, 简体中文을 지원하고 다크 모드와 Liquid Glass 디자인을 씁니다.
 
+## 스크린샷
+
+<img src="docs/release/store-screenshots/preview.png" alt="BestCut App Store 스크린샷 (위: 한국어, 아래: English)">
+
+App Store에 올리는 6.9인치 스크린샷입니다(위: 한국어, 아래: English). 원본은 [`docs/release/store-screenshots`](docs/release/store-screenshots)에 있고, `scripts/make_store_screens.swift`로 만듭니다.
+
 ## 개인정보
 
 사진은 iPhone 밖으로 나가지 않습니다. 로그인, 광고, 추적이 없습니다. 여행 이름을 추천할 때만 사진의 장소 좌표를 Apple 지도에 보내 도시 이름을 받아 옵니다. 자세한 내용은 [개인정보처리방침](docs/release/privacy-policy.md)에 있습니다.
